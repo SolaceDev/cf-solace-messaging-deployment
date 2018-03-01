@@ -76,12 +76,7 @@ instance_groups:
                     echo 'exit 0' >> /sbin/dhclient && \
                     echo '3a:40:d5:42:f4:86' > /usr/sw/.nodeIdentifyingMacAddr && \
                     chmod +x /sbin/dhclient
-      env_vars:
-      - NODE_TYPE=MESSAGE_ROUTING_NODE
-      - SERVICE_SSH_PORT=2222
-      - SYSTEM_SCALING_MAXCONNECTIONCOUNT=1000
-      - USERNAME_ADMIN_GLOBALACCESSLEVEL=admin
-      - USERNAME_ADMIN_PASSWORD=((vmr_admin_password))
+      env_file: /var/vcap/store/containers/solace/vmr_config/vmr_docker_env
       image: solace-bosh
       name: solace
       net: host
@@ -149,12 +144,7 @@ instance_groups:
                     echo 'exit 0' >> /sbin/dhclient && \
                     echo '3a:40:d5:42:f4:86' > /usr/sw/.nodeIdentifyingMacAddr && \
                     chmod +x /sbin/dhclient
-      env_vars:
-      - NODE_TYPE=MESSAGE_ROUTING_NODE
-      - SERVICE_SSH_PORT=2222
-      - SYSTEM_SCALING_MAXCONNECTIONCOUNT=100
-      - USERNAME_ADMIN_GLOBALACCESSLEVEL=admin
-      - USERNAME_ADMIN_PASSWORD=((vmr_admin_password))
+      env_file: /var/vcap/store/containers/solace/vmr_config/vmr_docker_env
       image: solace-bosh
       name: solace
       net: host
@@ -276,12 +266,7 @@ instance_groups:
                     echo 'exit 0' >> /sbin/dhclient && \
                     echo '3a:40:d5:42:f4:86' > /usr/sw/.nodeIdentifyingMacAddr && \
                     chmod +x /sbin/dhclient
-      env_vars:
-      - NODE_TYPE=MESSAGE_ROUTING_NODE
-      - SERVICE_SSH_PORT=2222
-      - SYSTEM_SCALING_MAXCONNECTIONCOUNT=10000
-      - USERNAME_ADMIN_GLOBALACCESSLEVEL=admin
-      - USERNAME_ADMIN_PASSWORD=((vmr_admin_password))
+      env_file: /var/vcap/store/containers/solace/vmr_config/vmr_docker_env
       image: solace-bosh
       name: solace
       net: host
@@ -376,12 +361,7 @@ instance_groups:
                     echo 'exit 0' >> /sbin/dhclient && \
                     echo '3a:40:d5:42:f4:86' > /usr/sw/.nodeIdentifyingMacAddr && \
                     chmod +x /sbin/dhclient
-      env_vars:
-      - NODE_TYPE=MESSAGE_ROUTING_NODE
-      - SERVICE_SSH_PORT=2222
-      - SYSTEM_SCALING_MAXCONNECTIONCOUNT=10000
-      - USERNAME_ADMIN_GLOBALACCESSLEVEL=admin
-      - USERNAME_ADMIN_PASSWORD=((vmr_admin_password))
+      env_file: /var/vcap/store/containers/solace/vmr_config/vmr_docker_env
       image: solace-bosh
       name: solace
       net: host
@@ -476,12 +456,7 @@ instance_groups:
                     echo 'exit 0' >> /sbin/dhclient && \
                     echo '3a:40:d5:42:f4:86' > /usr/sw/.nodeIdentifyingMacAddr && \
                     chmod +x /sbin/dhclient
-      env_vars:
-      - NODE_TYPE=MESSAGE_ROUTING_NODE
-      - SERVICE_SSH_PORT=2222
-      - SYSTEM_SCALING_MAXCONNECTIONCOUNT=1000
-      - USERNAME_ADMIN_GLOBALACCESSLEVEL=admin
-      - USERNAME_ADMIN_PASSWORD=((vmr_admin_password))
+      env_file: /var/vcap/store/containers/solace/vmr_config/vmr_docker_env
       image: solace-bosh
       name: solace
       net: host
