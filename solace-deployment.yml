@@ -89,6 +89,7 @@ instance_groups:
       - /var/vcap/store/prepare_vmr/volumes/internalSpool:/usr/sw/internalSpool
       - /var/vcap/store/prepare_vmr/volumes/adbBackup:/usr/sw/adb
       - /var/vcap/store/prepare_vmr/volumes/adb:/usr/sw/internalSpool/softAdb
+      - /var/vcap/store/prepare_vmr/volumes/secrets:/run/secrets
     edition: ((vmr_edition))
     heartbeat_rate: 15000
     ldap_config:
@@ -157,6 +158,7 @@ instance_groups:
       - /var/vcap/store/prepare_vmr/volumes/internalSpool:/usr/sw/internalSpool
       - /var/vcap/store/prepare_vmr/volumes/adbBackup:/usr/sw/adb
       - /var/vcap/store/prepare_vmr/volumes/adb:/usr/sw/internalSpool/softAdb
+      - /var/vcap/store/prepare_vmr/volumes/secrets:/run/secrets
     edition: ((vmr_edition))
     heartbeat_rate: 15000
     ldap_config:
@@ -279,6 +281,7 @@ instance_groups:
       - /var/vcap/store/prepare_vmr/volumes/internalSpool:/usr/sw/internalSpool
       - /var/vcap/store/prepare_vmr/volumes/adbBackup:/usr/sw/adb
       - /var/vcap/store/prepare_vmr/volumes/adb:/usr/sw/internalSpool/softAdb
+      - /var/vcap/store/prepare_vmr/volumes/secrets:/run/secrets
     edition: ((vmr_edition))
     heartbeat_rate: 15000
     ldap_config:
@@ -374,6 +377,7 @@ instance_groups:
       - /var/vcap/store/prepare_vmr/volumes/internalSpool:/usr/sw/internalSpool
       - /var/vcap/store/prepare_vmr/volumes/adbBackup:/usr/sw/adb
       - /var/vcap/store/prepare_vmr/volumes/adb:/usr/sw/internalSpool/softAdb
+      - /var/vcap/store/prepare_vmr/volumes/secrets:/run/secrets
     edition: ((vmr_edition))
     heartbeat_rate: 15000
     ldap_config:
@@ -469,6 +473,7 @@ instance_groups:
       - /var/vcap/store/prepare_vmr/volumes/internalSpool:/usr/sw/internalSpool
       - /var/vcap/store/prepare_vmr/volumes/adbBackup:/usr/sw/adb
       - /var/vcap/store/prepare_vmr/volumes/adb:/usr/sw/internalSpool/softAdb
+      - /var/vcap/store/prepare_vmr/volumes/secrets:/run/secrets
     edition: ((vmr_edition))
     heartbeat_rate: 15000
     ldap_config:
