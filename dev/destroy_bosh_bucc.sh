@@ -20,6 +20,19 @@ else
  (cd bucc; git pull)
 fi
 
-$WORKSPACE/bucc/bin/bucc down 
-$WORKSPACE/bucc/bin/bucc clean
+if [ -d $WORKSPACE/bucc/state ]; then
+   $WORKSPACE/bucc/bin/bucc down 
+   $WORKSPACE/bucc/bin/bucc clean
+fi
 
+if [ -f $WORKSPACE/bosh_env.sh ]; then
+   rm -f $WORKSPACE/bosh_env.sh
+fi
+
+if [ -f $WORKSPACE/.bosh_env ]; then
+   rm -f $WORKSPACE/.bosh_env
+fi
+
+if [ -f $WORKSPACE/deployment-vars.yml ]; then
+   rm -f $WORKSPACE/deployment-vars.yml
+fi

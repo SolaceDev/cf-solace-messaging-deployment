@@ -31,11 +31,11 @@ $WORKSPACE/bucc/bin/bucc up --cpi virtualbox --lite --debug | tee $WORKSPACE/buc
 $WORKSPACE/bucc/bin/bucc env > $WORKSPACE/bosh_env.sh
 
 echo
-echo "Adding swap. Please accept the The authenticity of host '192.168.50.6' when requested"
-echo
-$SCRIPTPATH/setup_bosh_swap.sh
-echo
 echo "Adding routes, you may need to enter your credentials to grant sudo permissions"
 echo
 $SCRIPTPATH/setup_bosh_routes.sh
+echo
+echo "Adding swap. Please accept the The authenticity of host '192.168.50.6' when requested"
+echo
+$SCRIPTPATH/setup_bosh_swap.sh
 
