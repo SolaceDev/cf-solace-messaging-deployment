@@ -1,0 +1,52 @@
+
+### Service Level Definition
+
+- type: replace
+  path: /instance_groups/name=broker/jobs/name=broker/properties/service_catalog/id
+  value: 05e81eec-762e-415c-b840-a804fc526ac2
+
+- type: replace
+  path: /instance_groups/name=broker/jobs/name=broker/properties/service_catalog/service_name
+  value: solace_psp
+
+- type: replace
+  path: /instance_groups/name=broker/jobs/name=broker/properties/service_catalog/service_description
+  value: Solace VMR Instance
+
+- type: replace
+  path: /instance_groups/name=broker/jobs/name=broker/properties/service_catalog/metadata/display_name
+  value: Solace
+
+- type: replace
+  path: /instance_groups/name=broker/jobs/name=broker/properties/service_catalog/tags/-
+  value: solace
+
+## Service Plans
+- type: replace
+  path: /instance_groups/name=broker/jobs/name=broker/properties/service_catalog/plans
+  value:
+    - name: shared-vm
+      plan_id: solace-shared-vm
+      description: Solace Shared VMR Instance
+      metadata:
+        display_name: Solace Shared VMR Instance
+        bullets: []
+      quotas:
+        service_instance_limit: 10
+      instance_groups:
+        - name: shared
+          vm_type: default
+          persistent_disk_type: 10GB
+          instances: 1
+          networks: [default]
+          azs: [z1]
+
+## ?! - Also names the instance group for the deployment
+- type: replace
+  path: /instance_groups/name=broker/jobs/-
+  value:
+    name: service-adapter
+    release: ((service_adapter_release))
+    properties:
+      solace_instance_group_name: shared
+
