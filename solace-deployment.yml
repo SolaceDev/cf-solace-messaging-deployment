@@ -112,6 +112,16 @@ instance_groups:
     management_access_auth_scheme:
       value: vmr_internal
     pool_name: Shared-VMR
+    plan:
+      limit:
+        maxVpns: 5
+        credentialsPerVpn: 100
+        maxConnections: 200
+        maxRestConnections: 200
+        maxSubscriptions: 100000
+        maxTransactedSessions: 200
+        maxTransactions: 1000
+        maxEndpoints: 200
     semp_port: 8080
     semp_ssl_port: 943
     ssh_port: 2222
@@ -127,6 +137,7 @@ instance_groups:
     tls_config:
       value: disabled
     vmr_agent_port: 18080
+    vmr_debug_logs: disabled
 - name: Community-VMR
   stemcell: default
   instances: 1
@@ -185,6 +196,16 @@ instance_groups:
     management_access_auth_scheme:
       value: vmr_internal
     pool_name: Community-VMR
+    plan:
+      limit:
+        maxVpns: 1
+        credentialsPerVpn: 90
+        maxConnections: 100
+        maxRestConnections: 100
+        maxSubscriptions: 500000
+        maxTransactedSessions: 100 
+        maxTransactions: 500
+        maxEndpoints: 100
     semp_port: 8080
     semp_ssl_port: 943
     ssh_port: 2222
@@ -200,6 +221,7 @@ instance_groups:
     tls_config:
       value: disabled
     vmr_agent_port: 18080
+    vmr_debug_logs: disabled
   jobs:
   - name: docker
     release: docker
@@ -312,6 +334,16 @@ instance_groups:
     management_access_auth_scheme:
       value: vmr_internal
     pool_name: Large-HA-VMR
+    plan:
+      limit:
+        maxVpns: 1
+        credentialsPerVpn: 500
+        maxConnections: 1000
+        maxRestConnections: 1000
+        maxSubscriptions: 500000
+        maxTransactedSessions: 1000
+        maxTransactions: 5000
+        maxEndpoints: 1000
     semp_port: 8080
     semp_ssl_port: 943
     ssh_port: 2222
@@ -327,6 +359,7 @@ instance_groups:
     tls_config:
       value: disabled
     vmr_agent_port: 18080
+    vmr_debug_logs: disabled
 - name: Large-VMR
   stemcell: default
   instances: 0
@@ -412,6 +445,16 @@ instance_groups:
     management_access_auth_scheme:
       value: vmr_internal
     pool_name: Large-VMR
+    plan:
+      limit:
+        maxVpns: 1
+        credentialsPerVpn: 500
+        maxConnections: 1000
+        maxRestConnections: 1000
+        maxSubscriptions: 500000
+        maxTransactedSessions: 1000
+        maxTransactions: 5000
+        maxEndpoints: 1000
     semp_port: 8080
     semp_ssl_port: 943
     ssh_port: 2222
@@ -427,6 +470,7 @@ instance_groups:
     tls_config:
       value: disabled
     vmr_agent_port: 18080
+    vmr_debug_logs: disabled
 - name: Medium-HA-VMR
   stemcell: default
   instances: 0
@@ -512,6 +556,16 @@ instance_groups:
     management_access_auth_scheme:
       value: vmr_internal
     pool_name: Medium-HA-VMR
+    plan:
+      limit:
+        maxVpns: 1
+        credentialsPerVpn: 500
+        maxConnections: 1000
+        maxRestConnections: 1000
+        maxSubscriptions: 500000
+        maxTransactedSessions: 1000
+        maxTransactions: 5000
+        maxEndpoints: 1000
     semp_port: 8080
     semp_ssl_port: 943
     ssh_port: 2222
@@ -527,6 +581,7 @@ instance_groups:
     tls_config:
       value: disabled
     vmr_agent_port: 18080
+    vmr_debug_logs: disabled
 - name: deploy-all
   jobs:
   - name: deploy-all
