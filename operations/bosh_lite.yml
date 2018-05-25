@@ -2,34 +2,98 @@
 # Add memory constraints to the docker containers 
 - type: replace
   path: /instance_groups/name=Shared-VMR/properties/containers/0/memory?
-  value: 4G
+  value: 1G
 - type: replace
   path: /instance_groups/name=Shared-VMR/properties/containers/0/memory_swap?
-  value: 6G
+  value: 2G
 - type: replace
   path: /instance_groups/name=Medium-HA-VMR/properties/containers/0/memory?
-  value: 4G
+  value: 1G
 - type: replace
   path: /instance_groups/name=Medium-HA-VMR/properties/containers/0/memory_swap?
-  value: 6G
+  value: 2G
 - type: replace
   path: /instance_groups/name=Large-VMR/properties/containers/0/memory?
-  value: 4G
+  value: 1G
 - type: replace
   path: /instance_groups/name=Large-VMR/properties/containers/0/memory_swap?
-  value: 6G
+  value: 2G
 - type: replace
   path: /instance_groups/name=Large-HA-VMR/properties/containers/0/memory?
-  value: 4G
+  value: 1G
 - type: replace
   path: /instance_groups/name=Large-HA-VMR/properties/containers/0/memory_swap?
-  value: 6G
+  value: 2G
 - type: replace
-  path: /instance_groups/name=Large-HA-VMR/properties/containers/0/env_vars?/2
-  value: SYSTEM_SCALING_MAXCONNECTIONCOUNT=1000
+  path: /instance_groups/name=Shared-VMR/properties/containers/0/env_vars?/2
+  value: SYSTEM_SCALING_MAXCONNECTIONCOUNT=100
 - type: replace
   path: /instance_groups/name=Large-VMR/properties/containers/0/env_vars?/2
-  value: SYSTEM_SCALING_MAXCONNECTIONCOUNT=1000
+  value: SYSTEM_SCALING_MAXCONNECTIONCOUNT=100
+- type: replace
+  path: /instance_groups/name=Medium-HA-VMR/properties/containers/0/env_vars?/2
+  value: SYSTEM_SCALING_MAXCONNECTIONCOUNT=100
+- type: replace
+  path: /instance_groups/name=Large-HA-VMR/properties/containers/0/env_vars?/2
+  value: SYSTEM_SCALING_MAXCONNECTIONCOUNT=100
+
+## Adjust plan scaling to match config keys
+
+# plan:
+#   limit:
+#        credentialsPerVpn: 500
+#        maxConnections: 100
+#        maxEndpoints: 1000
+#        maxRestConnections: 1000
+#        maxSubscriptions: 500000
+#        maxTransactedSessions: 1000
+#        maxTransactions: 5000
+#        maxVpns: 1
+
+- type: replace
+  path: /instance_groups/name=Shared-VMR/properties/plan/limit/maxConnections?
+  value: 100
+- type: replace
+  path: /instance_groups/name=Shared-VMR/properties/plan/limit/maxRestConnections?
+  value: 100
+- type: replace
+  path: /instance_groups/name=Shared-VMR/properties/plan/limit/credentialsPerVpn?
+  value: 20
+
+
+- type: replace
+  path: /instance_groups/name=Large-VMR/properties/plan/limit/maxConnections?
+  value: 100
+- type: replace
+  path: /instance_groups/name=Large-VMR/properties/plan/limit/maxRestConnections?
+  value: 100
+- type: replace
+  path: /instance_groups/name=Large-VMR/properties/plan/limit/credentialsPerVpn?
+  value: 50
+
+- type: replace
+  path: /instance_groups/name=Medium-HA-VMR/properties/plan/limit/maxConnections?
+  value: 100
+- type: replace
+  path: /instance_groups/name=Medium-HA-VMR/properties/plan/limit/maxRestConnections?
+  value: 100
+- type: replace
+  path: /instance_groups/name=Medium-HA-VMR/properties/plan/limit/credentialsPerVpn?
+  value: 50
+
+- type: replace
+  path: /instance_groups/name=Large-HA-VMR/properties/plan/limit/maxConnections?
+  value: 100
+- type: replace
+  path: /instance_groups/name=Large-HA-VMR/properties/plan/limit/maxRestConnections?
+  value: 100
+- type: replace
+  path: /instance_groups/name=Large-HA-VMR/properties/plan/limit/credentialsPerVpn?
+  value: 50
+
+
+
+
 # Should also set a smaller persistent disk for all VMs
 #
 - type: replace
