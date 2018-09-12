@@ -1,231 +1,371 @@
 - type: replace
-  path: /instance_groups/name=Community-VMR/properties/syslog_config/value
+  path: /instance_groups/name=enterprise-shared/properties/config/settings/syslog_config/value
   value: enabled
 - type: replace
-  path: /instance_groups/name=Community-VMR/properties/syslog_config/selected_option?/syslog_hostname?
+  path: /instance_groups/name=enterprise-shared/properties/config/settings/syslog_config/selected_option?/syslog_hostname?
   value: ((syslog.hostname))
 - type: replace
-  path: /instance_groups/name=Community-VMR/properties/syslog_config/selected_option?/syslog_port?
+  path: /instance_groups/name=enterprise-shared/properties/config/settings/syslog_config/selected_option?/syslog_port?
   value: ((syslog.port))
 - type: replace
-  path: /instance_groups/name=Community-VMR/properties/syslog_config/selected_option?/syslog_protocol?
+  path: /instance_groups/name=enterprise-shared/properties/config/settings/syslog_config/selected_option?/syslog_protocol?
   value: ((syslog.protocol))
 - type: replace
-  path: /instance_groups/name=Community-VMR/properties/syslog_config/selected_option?/syslog_vmr_command_logs?
+  path: /instance_groups/name=enterprise-shared/properties/config/settings/syslog_config/selected_option?/syslog_vmr_command_logs?
   value: ((syslog.vmr_command_logs))
 - type: replace
-  path: /instance_groups/name=Community-VMR/properties/syslog_config/selected_option?/syslog_vmr_event_logs?
+  path: /instance_groups/name=enterprise-shared/properties/config/settings/syslog_config/selected_option?/syslog_vmr_event_logs?
   value: ((syslog.vmr_event_logs))
 - type: replace
-  path: /instance_groups/name=Community-VMR/properties/syslog_config/selected_option?/syslog_vmr_system_logs?
+  path: /instance_groups/name=enterprise-shared/properties/config/settings/syslog_config/selected_option?/syslog_vmr_system_logs?
   value: ((syslog.vmr_system_logs))
 - type: replace
-  path: /instance_groups/name=Community-VMR/properties/syslog_config/selected_option?/syslog_broker_and_agent_logs?
+  path: /instance_groups/name=enterprise-shared/properties/config/settings/syslog_config/selected_option?/syslog_broker_and_agent_logs?
   value: ((syslog.broker_and_agent_logs))
 - type: replace
-  path: /instance_groups/name=Community-VMR/properties/syslog_hostname?
+  path: /instance_groups/name=enterprise-shared/properties/syslog_hostname?
   value: ((syslog.hostname))
 - type: replace
-  path: /instance_groups/name=Community-VMR/properties/syslog_port?
+  path: /instance_groups/name=enterprise-shared/properties/syslog_port?
   value: ((syslog.port))
 - type: replace
-  path: /instance_groups/name=Community-VMR/properties/syslog_protocol?
+  path: /instance_groups/name=enterprise-shared/properties/syslog_protocol?
   value: ((syslog.protocol))
 - type: replace
-  path: /instance_groups/name=Community-VMR/properties/syslog_vmr_command_logs?
+  path: /instance_groups/name=enterprise-shared/properties/syslog_vmr_command_logs?
   value: ((syslog.vmr_command_logs))
 - type: replace
-  path: /instance_groups/name=Community-VMR/properties/syslog_vmr_event_logs?
+  path: /instance_groups/name=enterprise-shared/properties/syslog_vmr_event_logs?
   value: ((syslog.vmr_event_logs))
 - type: replace
-  path: /instance_groups/name=Community-VMR/properties/syslog_vmr_system_logs?
+  path: /instance_groups/name=enterprise-shared/properties/syslog_vmr_system_logs?
   value: ((syslog.vmr_system_logs))
 - type: replace
-  path: /instance_groups/name=Community-VMR/properties/syslog_broker_and_agent_logs?
+  path: /instance_groups/name=enterprise-shared/properties/syslog_broker_and_agent_logs?
   value: ((syslog.broker_and_agent_logs))
 - type: replace
-  path: /instance_groups/name=Shared-VMR/properties/syslog_config/value
+  path: /instance_groups/name=enterprise-large/properties/config/settings/syslog_config/value
   value: enabled
 - type: replace
-  path: /instance_groups/name=Shared-VMR/properties/syslog_config/selected_option?/syslog_hostname?
+  path: /instance_groups/name=enterprise-large/properties/config/settings/syslog_config/selected_option?/syslog_hostname?
   value: ((syslog.hostname))
 - type: replace
-  path: /instance_groups/name=Shared-VMR/properties/syslog_config/selected_option?/syslog_port?
+  path: /instance_groups/name=enterprise-large/properties/config/settings/syslog_config/selected_option?/syslog_port?
   value: ((syslog.port))
 - type: replace
-  path: /instance_groups/name=Shared-VMR/properties/syslog_config/selected_option?/syslog_protocol?
+  path: /instance_groups/name=enterprise-large/properties/config/settings/syslog_config/selected_option?/syslog_protocol?
   value: ((syslog.protocol))
 - type: replace
-  path: /instance_groups/name=Shared-VMR/properties/syslog_config/selected_option?/syslog_vmr_command_logs?
+  path: /instance_groups/name=enterprise-large/properties/config/settings/syslog_config/selected_option?/syslog_vmr_command_logs?
   value: ((syslog.vmr_command_logs))
 - type: replace
-  path: /instance_groups/name=Shared-VMR/properties/syslog_config/selected_option?/syslog_vmr_event_logs?
+  path: /instance_groups/name=enterprise-large/properties/config/settings/syslog_config/selected_option?/syslog_vmr_event_logs?
   value: ((syslog.vmr_event_logs))
 - type: replace
-  path: /instance_groups/name=Shared-VMR/properties/syslog_config/selected_option?/syslog_vmr_system_logs?
+  path: /instance_groups/name=enterprise-large/properties/config/settings/syslog_config/selected_option?/syslog_vmr_system_logs?
   value: ((syslog.vmr_system_logs))
 - type: replace
-  path: /instance_groups/name=Shared-VMR/properties/syslog_config/selected_option?/syslog_broker_and_agent_logs?
+  path: /instance_groups/name=enterprise-large/properties/config/settings/syslog_config/selected_option?/syslog_broker_and_agent_logs?
   value: ((syslog.broker_and_agent_logs))
 - type: replace
-  path: /instance_groups/name=Shared-VMR/properties/syslog_hostname?
+  path: /instance_groups/name=enterprise-large/properties/syslog_hostname?
   value: ((syslog.hostname))
 - type: replace
-  path: /instance_groups/name=Shared-VMR/properties/syslog_port?
+  path: /instance_groups/name=enterprise-large/properties/syslog_port?
   value: ((syslog.port))
 - type: replace
-  path: /instance_groups/name=Shared-VMR/properties/syslog_protocol?
+  path: /instance_groups/name=enterprise-large/properties/syslog_protocol?
   value: ((syslog.protocol))
 - type: replace
-  path: /instance_groups/name=Shared-VMR/properties/syslog_vmr_command_logs?
+  path: /instance_groups/name=enterprise-large/properties/syslog_vmr_command_logs?
   value: ((syslog.vmr_command_logs))
 - type: replace
-  path: /instance_groups/name=Shared-VMR/properties/syslog_vmr_event_logs?
+  path: /instance_groups/name=enterprise-large/properties/syslog_vmr_event_logs?
   value: ((syslog.vmr_event_logs))
 - type: replace
-  path: /instance_groups/name=Shared-VMR/properties/syslog_vmr_system_logs?
+  path: /instance_groups/name=enterprise-large/properties/syslog_vmr_system_logs?
   value: ((syslog.vmr_system_logs))
 - type: replace
-  path: /instance_groups/name=Shared-VMR/properties/syslog_broker_and_agent_logs?
+  path: /instance_groups/name=enterprise-large/properties/syslog_broker_and_agent_logs?
   value: ((syslog.broker_and_agent_logs))
 - type: replace
-  path: /instance_groups/name=Large-VMR/properties/syslog_config/value
+  path: /instance_groups/name=enterprise-medium-ha/properties/config/settings/syslog_config/value
   value: enabled
 - type: replace
-  path: /instance_groups/name=Large-VMR/properties/syslog_config/selected_option?/syslog_hostname?
+  path: /instance_groups/name=enterprise-medium-ha/properties/config/settings/syslog_config/selected_option?/syslog_hostname?
   value: ((syslog.hostname))
 - type: replace
-  path: /instance_groups/name=Large-VMR/properties/syslog_config/selected_option?/syslog_port?
+  path: /instance_groups/name=enterprise-medium-ha/properties/config/settings/syslog_config/selected_option?/syslog_port?
   value: ((syslog.port))
 - type: replace
-  path: /instance_groups/name=Large-VMR/properties/syslog_config/selected_option?/syslog_protocol?
+  path: /instance_groups/name=enterprise-medium-ha/properties/config/settings/syslog_config/selected_option?/syslog_protocol?
   value: ((syslog.protocol))
 - type: replace
-  path: /instance_groups/name=Large-VMR/properties/syslog_config/selected_option?/syslog_vmr_command_logs?
+  path: /instance_groups/name=enterprise-medium-ha/properties/config/settings/syslog_config/selected_option?/syslog_vmr_command_logs?
   value: ((syslog.vmr_command_logs))
 - type: replace
-  path: /instance_groups/name=Large-VMR/properties/syslog_config/selected_option?/syslog_vmr_event_logs?
+  path: /instance_groups/name=enterprise-medium-ha/properties/config/settings/syslog_config/selected_option?/syslog_vmr_event_logs?
   value: ((syslog.vmr_event_logs))
 - type: replace
-  path: /instance_groups/name=Large-VMR/properties/syslog_config/selected_option?/syslog_vmr_system_logs?
+  path: /instance_groups/name=enterprise-medium-ha/properties/config/settings/syslog_config/selected_option?/syslog_vmr_system_logs?
   value: ((syslog.vmr_system_logs))
 - type: replace
-  path: /instance_groups/name=Large-VMR/properties/syslog_config/selected_option?/syslog_broker_and_agent_logs?
+  path: /instance_groups/name=enterprise-medium-ha/properties/config/settings/syslog_config/selected_option?/syslog_broker_and_agent_logs?
   value: ((syslog.broker_and_agent_logs))
 - type: replace
-  path: /instance_groups/name=Large-VMR/properties/syslog_hostname?
+  path: /instance_groups/name=enterprise-medium-ha/properties/syslog_hostname?
   value: ((syslog.hostname))
 - type: replace
-  path: /instance_groups/name=Large-VMR/properties/syslog_port?
+  path: /instance_groups/name=enterprise-medium-ha/properties/syslog_port?
   value: ((syslog.port))
 - type: replace
-  path: /instance_groups/name=Large-VMR/properties/syslog_protocol?
+  path: /instance_groups/name=enterprise-medium-ha/properties/syslog_protocol?
   value: ((syslog.protocol))
 - type: replace
-  path: /instance_groups/name=Large-VMR/properties/syslog_vmr_command_logs?
+  path: /instance_groups/name=enterprise-medium-ha/properties/syslog_vmr_command_logs?
   value: ((syslog.vmr_command_logs))
 - type: replace
-  path: /instance_groups/name=Large-VMR/properties/syslog_vmr_event_logs?
+  path: /instance_groups/name=enterprise-medium-ha/properties/syslog_vmr_event_logs?
   value: ((syslog.vmr_event_logs))
 - type: replace
-  path: /instance_groups/name=Large-VMR/properties/syslog_vmr_system_logs?
+  path: /instance_groups/name=enterprise-medium-ha/properties/syslog_vmr_system_logs?
   value: ((syslog.vmr_system_logs))
 - type: replace
-  path: /instance_groups/name=Large-VMR/properties/syslog_broker_and_agent_logs?
+  path: /instance_groups/name=enterprise-medium-ha/properties/syslog_broker_and_agent_logs?
   value: ((syslog.broker_and_agent_logs))
 - type: replace
-  path: /instance_groups/name=Medium-HA-VMR/properties/syslog_config/value
+  path: /instance_groups/name=enterprise-large-ha/properties/config/settings/syslog_config/value
   value: enabled
 - type: replace
-  path: /instance_groups/name=Medium-HA-VMR/properties/syslog_config/selected_option?/syslog_hostname?
+  path: /instance_groups/name=enterprise-large-ha/properties/config/settings/syslog_config/selected_option?/syslog_hostname?
   value: ((syslog.hostname))
 - type: replace
-  path: /instance_groups/name=Medium-HA-VMR/properties/syslog_config/selected_option?/syslog_port?
+  path: /instance_groups/name=enterprise-large-ha/properties/config/settings/syslog_config/selected_option?/syslog_port?
   value: ((syslog.port))
 - type: replace
-  path: /instance_groups/name=Medium-HA-VMR/properties/syslog_config/selected_option?/syslog_protocol?
+  path: /instance_groups/name=enterprise-large-ha/properties/config/settings/syslog_config/selected_option?/syslog_protocol?
   value: ((syslog.protocol))
 - type: replace
-  path: /instance_groups/name=Medium-HA-VMR/properties/syslog_config/selected_option?/syslog_vmr_command_logs?
+  path: /instance_groups/name=enterprise-large-ha/properties/config/settings/syslog_config/selected_option?/syslog_vmr_command_logs?
   value: ((syslog.vmr_command_logs))
 - type: replace
-  path: /instance_groups/name=Medium-HA-VMR/properties/syslog_config/selected_option?/syslog_vmr_event_logs?
+  path: /instance_groups/name=enterprise-large-ha/properties/config/settings/syslog_config/selected_option?/syslog_vmr_event_logs?
   value: ((syslog.vmr_event_logs))
 - type: replace
-  path: /instance_groups/name=Medium-HA-VMR/properties/syslog_config/selected_option?/syslog_vmr_system_logs?
+  path: /instance_groups/name=enterprise-large-ha/properties/config/settings/syslog_config/selected_option?/syslog_vmr_system_logs?
   value: ((syslog.vmr_system_logs))
 - type: replace
-  path: /instance_groups/name=Medium-HA-VMR/properties/syslog_config/selected_option?/syslog_broker_and_agent_logs?
+  path: /instance_groups/name=enterprise-large-ha/properties/config/settings/syslog_config/selected_option?/syslog_broker_and_agent_logs?
   value: ((syslog.broker_and_agent_logs))
 - type: replace
-  path: /instance_groups/name=Medium-HA-VMR/properties/syslog_hostname?
+  path: /instance_groups/name=enterprise-large-ha/properties/syslog_broker_and_agent_logs?
+  value: ((syslog.broker_and_agent_logs))
+- type: replace
+  path: /instance_groups/name=enterprise-large-ha/properties/syslog_hostname?
   value: ((syslog.hostname))
 - type: replace
-  path: /instance_groups/name=Medium-HA-VMR/properties/syslog_port?
+  path: /instance_groups/name=enterprise-large-ha/properties/syslog_port?
   value: ((syslog.port))
 - type: replace
-  path: /instance_groups/name=Medium-HA-VMR/properties/syslog_protocol?
+  path: /instance_groups/name=enterprise-large-ha/properties/syslog_protocol?
   value: ((syslog.protocol))
 - type: replace
-  path: /instance_groups/name=Medium-HA-VMR/properties/syslog_vmr_command_logs?
+  path: /instance_groups/name=enterprise-large-ha/properties/syslog_vmr_command_logs?
   value: ((syslog.vmr_command_logs))
 - type: replace
-  path: /instance_groups/name=Medium-HA-VMR/properties/syslog_vmr_event_logs?
+  path: /instance_groups/name=enterprise-large-ha/properties/syslog_vmr_event_logs?
   value: ((syslog.vmr_event_logs))
 - type: replace
-  path: /instance_groups/name=Medium-HA-VMR/properties/syslog_vmr_system_logs?
+  path: /instance_groups/name=enterprise-large-ha/properties/syslog_vmr_system_logs?
   value: ((syslog.vmr_system_logs))
 - type: replace
-  path: /instance_groups/name=Medium-HA-VMR/properties/syslog_broker_and_agent_logs?
+  path: /instance_groups/name=enterprise-large-ha/properties/syslog_broker_and_agent_logs?
   value: ((syslog.broker_and_agent_logs))
+  
 - type: replace
-  path: /instance_groups/name=Large-HA-VMR/properties/syslog_config/value
+  path: /instance_groups/name=standard-medium/properties/config/settings/syslog_config/value
   value: enabled
 - type: replace
-  path: /instance_groups/name=Large-HA-VMR/properties/syslog_config/selected_option?/syslog_hostname?
+  path: /instance_groups/name=standard-medium/properties/config/settings/syslog_config/selected_option?/syslog_hostname?
   value: ((syslog.hostname))
 - type: replace
-  path: /instance_groups/name=Large-HA-VMR/properties/syslog_config/selected_option?/syslog_port?
+  path: /instance_groups/name=standard-medium/properties/config/settings/syslog_config/selected_option?/syslog_port?
   value: ((syslog.port))
 - type: replace
-  path: /instance_groups/name=Large-HA-VMR/properties/syslog_config/selected_option?/syslog_protocol?
+  path: /instance_groups/name=standard-medium/properties/config/settings/syslog_config/selected_option?/syslog_protocol?
   value: ((syslog.protocol))
 - type: replace
-  path: /instance_groups/name=Large-HA-VMR/properties/syslog_config/selected_option?/syslog_vmr_command_logs?
+  path: /instance_groups/name=standard-medium/properties/config/settings/syslog_config/selected_option?/syslog_vmr_command_logs?
   value: ((syslog.vmr_command_logs))
 - type: replace
-  path: /instance_groups/name=Large-HA-VMR/properties/syslog_config/selected_option?/syslog_vmr_event_logs?
+  path: /instance_groups/name=standard-medium/properties/config/settings/syslog_config/selected_option?/syslog_vmr_event_logs?
   value: ((syslog.vmr_event_logs))
 - type: replace
-  path: /instance_groups/name=Large-HA-VMR/properties/syslog_config/selected_option?/syslog_vmr_system_logs?
+  path: /instance_groups/name=standard-medium/properties/config/settings/syslog_config/selected_option?/syslog_vmr_system_logs?
   value: ((syslog.vmr_system_logs))
 - type: replace
-  path: /instance_groups/name=Large-HA-VMR/properties/syslog_config/selected_option?/syslog_broker_and_agent_logs?
+  path: /instance_groups/name=standard-medium/properties/config/settings/syslog_config/selected_option?/syslog_broker_and_agent_logs?
   value: ((syslog.broker_and_agent_logs))
 - type: replace
-  path: /instance_groups/name=Large-HA-VMR/properties/syslog_broker_and_agent_logs?
-  value: ((syslog.broker_and_agent_logs))
-- type: replace
-  path: /instance_groups/name=Large-HA-VMR/properties/syslog_hostname?
+  path: /instance_groups/name=standard-medium/properties/syslog_hostname?
   value: ((syslog.hostname))
 - type: replace
-  path: /instance_groups/name=Large-HA-VMR/properties/syslog_port?
+  path: /instance_groups/name=standard-medium/properties/syslog_port?
   value: ((syslog.port))
 - type: replace
-  path: /instance_groups/name=Large-HA-VMR/properties/syslog_protocol?
+  path: /instance_groups/name=standard-medium/properties/syslog_protocol?
   value: ((syslog.protocol))
 - type: replace
-  path: /instance_groups/name=Large-HA-VMR/properties/syslog_vmr_command_logs?
+  path: /instance_groups/name=standard-medium/properties/syslog_vmr_command_logs?
   value: ((syslog.vmr_command_logs))
 - type: replace
-  path: /instance_groups/name=Large-HA-VMR/properties/syslog_vmr_event_logs?
+  path: /instance_groups/name=standard-medium/properties/syslog_vmr_event_logs?
   value: ((syslog.vmr_event_logs))
 - type: replace
-  path: /instance_groups/name=Large-HA-VMR/properties/syslog_vmr_system_logs?
+  path: /instance_groups/name=standard-medium/properties/syslog_vmr_system_logs?
   value: ((syslog.vmr_system_logs))
 - type: replace
-  path: /instance_groups/name=Large-HA-VMR/properties/syslog_broker_and_agent_logs?
+  path: /instance_groups/name=standard-medium/properties/syslog_broker_and_agent_logs?
   value: ((syslog.broker_and_agent_logs))
+- type: replace
+  path: /instance_groups/name=standard-large/properties/config/settings/syslog_config/value
+  value: enabled
+- type: replace
+  path: /instance_groups/name=standard-large/properties/config/settings/syslog_config/selected_option?/syslog_hostname?
+  value: ((syslog.hostname))
+- type: replace
+  path: /instance_groups/name=standard-large/properties/config/settings/syslog_config/selected_option?/syslog_port?
+  value: ((syslog.port))
+- type: replace
+  path: /instance_groups/name=standard-large/properties/config/settings/syslog_config/selected_option?/syslog_protocol?
+  value: ((syslog.protocol))
+- type: replace
+  path: /instance_groups/name=standard-large/properties/config/settings/syslog_config/selected_option?/syslog_vmr_command_logs?
+  value: ((syslog.vmr_command_logs))
+- type: replace
+  path: /instance_groups/name=standard-large/properties/config/settings/syslog_config/selected_option?/syslog_vmr_event_logs?
+  value: ((syslog.vmr_event_logs))
+- type: replace
+  path: /instance_groups/name=standard-large/properties/config/settings/syslog_config/selected_option?/syslog_vmr_system_logs?
+  value: ((syslog.vmr_system_logs))
+- type: replace
+  path: /instance_groups/name=standard-large/properties/config/settings/syslog_config/selected_option?/syslog_broker_and_agent_logs?
+  value: ((syslog.broker_and_agent_logs))
+- type: replace
+  path: /instance_groups/name=standard-large/properties/syslog_hostname?
+  value: ((syslog.hostname))
+- type: replace
+  path: /instance_groups/name=standard-large/properties/syslog_port?
+  value: ((syslog.port))
+- type: replace
+  path: /instance_groups/name=standard-large/properties/syslog_protocol?
+  value: ((syslog.protocol))
+- type: replace
+  path: /instance_groups/name=standard-large/properties/syslog_vmr_command_logs?
+  value: ((syslog.vmr_command_logs))
+- type: replace
+  path: /instance_groups/name=standard-large/properties/syslog_vmr_event_logs?
+  value: ((syslog.vmr_event_logs))
+- type: replace
+  path: /instance_groups/name=standard-large/properties/syslog_vmr_system_logs?
+  value: ((syslog.vmr_system_logs))
+- type: replace
+  path: /instance_groups/name=standard-large/properties/syslog_broker_and_agent_logs?
+  value: ((syslog.broker_and_agent_logs))
+- type: replace
+  path: /instance_groups/name=standard-medium-ha/properties/config/settings/syslog_config/value
+  value: enabled
+- type: replace
+  path: /instance_groups/name=standard-medium-ha/properties/config/settings/syslog_config/selected_option?/syslog_hostname?
+  value: ((syslog.hostname))
+- type: replace
+  path: /instance_groups/name=standard-medium-ha/properties/config/settings/syslog_config/selected_option?/syslog_port?
+  value: ((syslog.port))
+- type: replace
+  path: /instance_groups/name=standard-medium-ha/properties/config/settings/syslog_config/selected_option?/syslog_protocol?
+  value: ((syslog.protocol))
+- type: replace
+  path: /instance_groups/name=standard-medium-ha/properties/config/settings/syslog_config/selected_option?/syslog_vmr_command_logs?
+  value: ((syslog.vmr_command_logs))
+- type: replace
+  path: /instance_groups/name=standard-medium-ha/properties/config/settings/syslog_config/selected_option?/syslog_vmr_event_logs?
+  value: ((syslog.vmr_event_logs))
+- type: replace
+  path: /instance_groups/name=standard-medium-ha/properties/config/settings/syslog_config/selected_option?/syslog_vmr_system_logs?
+  value: ((syslog.vmr_system_logs))
+- type: replace
+  path: /instance_groups/name=standard-medium-ha/properties/config/settings/syslog_config/selected_option?/syslog_broker_and_agent_logs?
+  value: ((syslog.broker_and_agent_logs))
+- type: replace
+  path: /instance_groups/name=standard-medium-ha/properties/syslog_hostname?
+  value: ((syslog.hostname))
+- type: replace
+  path: /instance_groups/name=standard-medium-ha/properties/syslog_port?
+  value: ((syslog.port))
+- type: replace
+  path: /instance_groups/name=standard-medium-ha/properties/syslog_protocol?
+  value: ((syslog.protocol))
+- type: replace
+  path: /instance_groups/name=standard-medium-ha/properties/syslog_vmr_command_logs?
+  value: ((syslog.vmr_command_logs))
+- type: replace
+  path: /instance_groups/name=standard-medium-ha/properties/syslog_vmr_event_logs?
+  value: ((syslog.vmr_event_logs))
+- type: replace
+  path: /instance_groups/name=standard-medium-ha/properties/syslog_vmr_system_logs?
+  value: ((syslog.vmr_system_logs))
+- type: replace
+  path: /instance_groups/name=standard-medium-ha/properties/syslog_broker_and_agent_logs?
+  value: ((syslog.broker_and_agent_logs))
+- type: replace
+  path: /instance_groups/name=standard-large-ha/properties/config/settings/syslog_config/value
+  value: enabled
+- type: replace
+  path: /instance_groups/name=standard-large-ha/properties/config/settings/syslog_config/selected_option?/syslog_hostname?
+  value: ((syslog.hostname))
+- type: replace
+  path: /instance_groups/name=standard-large-ha/properties/config/settings/syslog_config/selected_option?/syslog_port?
+  value: ((syslog.port))
+- type: replace
+  path: /instance_groups/name=standard-large-ha/properties/config/settings/syslog_config/selected_option?/syslog_protocol?
+  value: ((syslog.protocol))
+- type: replace
+  path: /instance_groups/name=standard-large-ha/properties/config/settings/syslog_config/selected_option?/syslog_vmr_command_logs?
+  value: ((syslog.vmr_command_logs))
+- type: replace
+  path: /instance_groups/name=standard-large-ha/properties/config/settings/syslog_config/selected_option?/syslog_vmr_event_logs?
+  value: ((syslog.vmr_event_logs))
+- type: replace
+  path: /instance_groups/name=standard-large-ha/properties/config/settings/syslog_config/selected_option?/syslog_vmr_system_logs?
+  value: ((syslog.vmr_system_logs))
+- type: replace
+  path: /instance_groups/name=standard-large-ha/properties/config/settings/syslog_config/selected_option?/syslog_broker_and_agent_logs?
+  value: ((syslog.broker_and_agent_logs))
+- type: replace
+  path: /instance_groups/name=standard-large-ha/properties/syslog_broker_and_agent_logs?
+  value: ((syslog.broker_and_agent_logs))
+- type: replace
+  path: /instance_groups/name=standard-large-ha/properties/syslog_hostname?
+  value: ((syslog.hostname))
+- type: replace
+  path: /instance_groups/name=standard-large-ha/properties/syslog_port?
+  value: ((syslog.port))
+- type: replace
+  path: /instance_groups/name=standard-large-ha/properties/syslog_protocol?
+  value: ((syslog.protocol))
+- type: replace
+  path: /instance_groups/name=standard-large-ha/properties/syslog_vmr_command_logs?
+  value: ((syslog.vmr_command_logs))
+- type: replace
+  path: /instance_groups/name=standard-large-ha/properties/syslog_vmr_event_logs?
+  value: ((syslog.vmr_event_logs))
+- type: replace
+  path: /instance_groups/name=standard-large-ha/properties/syslog_vmr_system_logs?
+  value: ((syslog.vmr_system_logs))
+- type: replace
+  path: /instance_groups/name=standard-large-ha/properties/syslog_broker_and_agent_logs?
+  value: ((syslog.broker_and_agent_logs))
+
 - type: replace
   path: /instance_groups/name=deploy-all/properties/syslog_config/value
   value: enabled

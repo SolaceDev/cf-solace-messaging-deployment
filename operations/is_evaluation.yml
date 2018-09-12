@@ -1,24 +1,34 @@
 - type: replace
-  path: /instance_groups/name=delete-all/properties/solace_messaging/app_manifest/env/IS_ENTERPRISE_MODE?
+  path: /instance_groups/name=delete-all/properties/solace_pubsub_broker/app_manifest/env/IS_ENTERPRISE_MODE?
   value: false
 - type: replace
-  path: /instance_groups/name=deploy-all/properties/solace_messaging/app_manifest/env/IS_ENTERPRISE_MODE?
+  path: /instance_groups/name=deploy-all/properties/solace_pubsub_broker/app_manifest/env/IS_ENTERPRISE_MODE?
   value: false
 - type: replace
-  path: /instance_groups/name=tests/properties/solace_messaging/app_manifest/env/IS_ENTERPRISE_MODE?
+  path: /instance_groups/name=tests/properties/solace_pubsub_broker/app_manifest/env/IS_ENTERPRISE_MODE?
   value: false
 - type: replace
-  path: /instance_groups/name=Community-VMR/properties/edition
+  path: /instance_groups/name=enterprise-shared/properties/config/settings/edition
   value: 'evaluation'
 - type: replace
-  path: /instance_groups/name=Shared-VMR/properties/edition
+  path: /instance_groups/name=enterprise-large/properties/config/settings/edition
   value: 'evaluation'
 - type: replace
-  path: /instance_groups/name=Large-VMR/properties/edition
+  path: /instance_groups/name=enterprise-large-ha/properties/config/settings/edition
   value: 'evaluation'
 - type: replace
-  path: /instance_groups/name=Large-HA-VMR/properties/edition
+  path: /instance_groups/name=enterprise-medium-ha/properties/config/settings/edition
   value: 'evaluation'
 - type: replace
-  path: /instance_groups/name=Medium-HA-VMR/properties/edition
+  path: /instance_groups/name=standard-medium/properties/config/settings/edition
   value: 'evaluation'
+- type: replace
+  path: /instance_groups/name=standard-large/properties/config/settings/edition
+  value: 'evaluation'
+- type: replace
+  path: /instance_groups/name=standard-large-ha/properties/config/settings/edition
+  value: 'evaluation'
+- type: replace
+  path: /instance_groups/name=standard-medium-ha/properties/config/settings/edition
+  value: 'evaluation'
+

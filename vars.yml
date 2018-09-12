@@ -1,11 +1,6 @@
-##
-# Default testing plan, for production deployment please choose a High availability Plan.
-##
-mysql_plan: 100mb
-
 # CF Space and Org in which solace messaging service broker to be installed.
 solace_broker_cf_organization: solace
-solace_broker_cf_space: solace-messaging
+solace_broker_cf_space: solace-broker
 
 # The client secret for the "solace_router" uaa client
 solace_router_client_secret: 1234
@@ -13,6 +8,9 @@ solace_router_client_id: solace_router
 
 # The start port seed from which all ports allocation are based.
 starting_port: 7000
+
+# Increase security by hiding service instance credentials from VCAP services
+secure_service_credentials: false
 
 # This is the password set for the "admin" user on the VMR
 vmr_admin_password: admin1
@@ -24,5 +22,14 @@ shared_plan_instances: 1
 large_plan_instances: 0 
 medium_ha_plan_instances: 0
 large_ha_plan_instances: 0 
-# This variable has no effect when the community plan is not available, such as when using the enterprise vmr edition.
-community_plan_instances: 0
+
+# Fill those when using MySQL For PCF tile
+mysql_for_pcf_service_name: p-mysql
+mysql_for_pcf_service_plan: 100mb
+
+# Fill those when using an external MySQL
+mysql_external_hostname: db.cvn5wteupmtt.us-east-1.rds.amazonaws.com
+mysql_external_port: 3306
+mysql_external_dbname: solace
+mysql_external_user: solace_user
+mysql_external_password: password_sol

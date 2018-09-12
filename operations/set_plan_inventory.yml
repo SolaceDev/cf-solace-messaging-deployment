@@ -1,15 +1,24 @@
 - type: replace
-  path: /instance_groups/name=Community-VMR/instances
-  value: ((community_plan_instances))
-- type: replace
-  path: /instance_groups/name=Shared-VMR/instances
+  path: /instance_groups/name=enterprise-shared/instances
   value: ((shared_plan_instances))
 - type: replace
-  path: /instance_groups/name=Large-VMR/instances
+  path: /instance_groups/name=enterprise-large/instances
   value: ((large_plan_instances))
 - type: replace
-  path: /instance_groups/name=Large-HA-VMR/instances
+  path: /instance_groups/name=enterprise-large-ha/instances
   value: ((large_ha_plan_instances))
 - type: replace
-  path: /instance_groups/name=Medium-HA-VMR/instances
+  path: /instance_groups/name=enterprise-medium-ha/instances
   value: ((medium_ha_plan_instances))
+- type: replace
+  path: /instance_groups/name=standard-medium/instances
+  value: ((standard_medium_plan_instances))
+- type: replace
+  path: /instance_groups/name=standard-large/instances
+  value: ((standard_large_plan_instances))
+- type: replace
+  path: /instance_groups/name=standard-large-ha/instances
+  value: ((standard_large_ha_plan_instances))
+- type: replace
+  path: /instance_groups/name=standard-medium-ha/instances
+  value: ((standard_medium_ha_plan_instances))

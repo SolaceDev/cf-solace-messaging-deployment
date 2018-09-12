@@ -1,108 +1,173 @@
 - type: replace
-  path: /instance_groups/name=Community-VMR/properties/management_access_auth_scheme/value
+  path: /instance_groups/name=enterprise-shared/properties/config/settings/management_access_auth_scheme/value
   value: ldap_server
 - type: replace
-  path: /instance_groups/name=Community-VMR/properties/management_access_auth_scheme/selected_option?/ldap_mgmt_admin_groups? 
+  path: /instance_groups/name=enterprise-shared/properties/config/settings/management_access_auth_scheme/selected_option?/ldap_mgmt_admin_groups?
   value: ((management_access_auth_scheme.mgmt_admin_groups))
 - type: replace
-  path: /instance_groups/name=Community-VMR/properties/management_access_auth_scheme/selected_option?/ldap_mgmt_read_only_groups?
+  path: /instance_groups/name=enterprise-shared/properties/config/settings/management_access_auth_scheme/selected_option?/ldap_mgmt_read_only_groups?
   value: ((management_access_auth_scheme.mgmt_read_only_groups))
 - type: replace
-  path: /instance_groups/name=Community-VMR/properties/management_access_auth_scheme/selected_option?/ldap_mgmt_read_write_groups?
+  path: /instance_groups/name=enterprise-shared/properties/config/settings/management_access_auth_scheme/selected_option?/ldap_mgmt_read_write_groups?
   value: ((management_access_auth_scheme.mgmt_read_write_groups))
 - type: replace
-  path: /instance_groups/name=Community-VMR/properties/ldap_mgmt_admin_groups?
+  path: /instance_groups/name=enterprise-shared/properties/config/settings/ldap_mgmt_admin_groups?
   value: ((management_access_auth_scheme.mgmt_admin_groups))
 - type: replace
-  path: /instance_groups/name=Community-VMR/properties/ldap_mgmt_read_only_groups?
+  path: /instance_groups/name=enterprise-shared/properties/config/settings/ldap_mgmt_read_only_groups?
   value: ((management_access_auth_scheme.mgmt_read_only_groups))
 - type: replace
-  path: /instance_groups/name=Community-VMR/properties/ldap_mgmt_read_write_groups?
+  path: /instance_groups/name=enterprise-shared/properties/config/settings/ldap_mgmt_read_write_groups?
   value: ((management_access_auth_scheme.mgmt_read_write_groups))
 - type: replace
-  path: /instance_groups/name=Shared-VMR/properties/management_access_auth_scheme/value
+  path: /instance_groups/name=enterprise-large/properties/config/settings/management_access_auth_scheme/value
   value: ldap_server
 - type: replace
-  path: /instance_groups/name=Shared-VMR/properties/management_access_auth_scheme/selected_option?/ldap_mgmt_admin_groups?
+  path: /instance_groups/name=enterprise-large/properties/config/settings/management_access_auth_scheme/selected_option?/ldap_mgmt_admin_groups?
   value: ((management_access_auth_scheme.mgmt_admin_groups))
 - type: replace
-  path: /instance_groups/name=Shared-VMR/properties/management_access_auth_scheme/selected_option?/ldap_mgmt_read_only_groups?
+  path: /instance_groups/name=enterprise-large/properties/config/settings/management_access_auth_scheme/selected_option?/ldap_mgmt_read_only_groups?
   value: ((management_access_auth_scheme.mgmt_read_only_groups))
 - type: replace
-  path: /instance_groups/name=Shared-VMR/properties/management_access_auth_scheme/selected_option?/ldap_mgmt_read_write_groups?
+  path: /instance_groups/name=enterprise-large/properties/config/settings/management_access_auth_scheme/selected_option?/ldap_mgmt_read_write_groups?
   value: ((management_access_auth_scheme.mgmt_read_write_groups))
 - type: replace
-  path: /instance_groups/name=Shared-VMR/properties/ldap_mgmt_admin_groups?
+  path: /instance_groups/name=enterprise-large/properties/config/settings/ldap_mgmt_admin_groups?
   value: ((management_access_auth_scheme.mgmt_admin_groups))
 - type: replace
-  path: /instance_groups/name=Shared-VMR/properties/ldap_mgmt_read_only_groups?
+  path: /instance_groups/name=enterprise-large/properties/config/settings/ldap_mgmt_read_only_groups?
   value: ((management_access_auth_scheme.mgmt_read_only_groups))
 - type: replace
-  path: /instance_groups/name=Shared-VMR/properties/ldap_mgmt_read_write_groups?
+  path: /instance_groups/name=enterprise-large/properties/config/settings/ldap_mgmt_read_write_groups?
   value: ((management_access_auth_scheme.mgmt_read_write_groups))
 - type: replace
-  path: /instance_groups/name=Large-VMR/properties/management_access_auth_scheme/value
+  path: /instance_groups/name=enterprise-medium-ha/properties/config/settings/management_access_auth_scheme/value
   value: ldap_server
 - type: replace
-  path: /instance_groups/name=Large-VMR/properties/management_access_auth_scheme/selected_option?/ldap_mgmt_admin_groups?
+  path: /instance_groups/name=enterprise-medium-ha/properties/config/settings/management_access_auth_scheme/selected_option?/ldap_mgmt_admin_groups?
   value: ((management_access_auth_scheme.mgmt_admin_groups))
 - type: replace
-  path: /instance_groups/name=Large-VMR/properties/management_access_auth_scheme/selected_option?/ldap_mgmt_read_only_groups?
+  path: /instance_groups/name=enterprise-medium-ha/properties/config/settings/management_access_auth_scheme/selected_option?/ldap_mgmt_read_only_groups?
   value: ((management_access_auth_scheme.mgmt_read_only_groups))
 - type: replace
-  path: /instance_groups/name=Large-VMR/properties/management_access_auth_scheme/selected_option?/ldap_mgmt_read_write_groups?
+  path: /instance_groups/name=enterprise-medium-ha/properties/config/settings/management_access_auth_scheme/selected_option?/ldap_mgmt_read_write_groups?
   value: ((management_access_auth_scheme.mgmt_read_write_groups))
 - type: replace
-  path: /instance_groups/name=Large-VMR/properties/ldap_mgmt_admin_groups?
+  path: /instance_groups/name=enterprise-medium-ha/properties/config/settings/ldap_mgmt_admin_groups?
   value: ((management_access_auth_scheme.mgmt_admin_groups))
 - type: replace
-  path: /instance_groups/name=Large-VMR/properties/ldap_mgmt_read_only_groups?
+  path: /instance_groups/name=enterprise-medium-ha/properties/config/settings/ldap_mgmt_read_only_groups?
   value: ((management_access_auth_scheme.mgmt_read_only_groups))
 - type: replace
-  path: /instance_groups/name=Large-VMR/properties/ldap_mgmt_read_write_groups?
+  path: /instance_groups/name=enterprise-medium-ha/properties/config/settings/ldap_mgmt_read_write_groups?
   value: ((management_access_auth_scheme.mgmt_read_write_groups))
 - type: replace
-  path: /instance_groups/name=Medium-HA-VMR/properties/management_access_auth_scheme/value
+  path: /instance_groups/name=enterprise-large-ha/properties/config/settings/management_access_auth_scheme/value
   value: ldap_server
 - type: replace
-  path: /instance_groups/name=Medium-HA-VMR/properties/management_access_auth_scheme/selected_option?/ldap_mgmt_admin_groups?
+  path: /instance_groups/name=enterprise-large-ha/properties/config/settings/management_access_auth_scheme/selected_option?/ldap_mgmt_admin_groups?
   value: ((management_access_auth_scheme.mgmt_admin_groups))
 - type: replace
-  path: /instance_groups/name=Medium-HA-VMR/properties/management_access_auth_scheme/selected_option?/ldap_mgmt_read_only_groups?
+  path: /instance_groups/name=enterprise-large-ha/properties/config/settings/management_access_auth_scheme/selected_option?/ldap_mgmt_read_only_groups?
   value: ((management_access_auth_scheme.mgmt_read_only_groups))
 - type: replace
-  path: /instance_groups/name=Medium-HA-VMR/properties/management_access_auth_scheme/selected_option?/ldap_mgmt_read_write_groups?
+  path: /instance_groups/name=enterprise-large-ha/properties/config/settings/management_access_auth_scheme/selected_option?/ldap_mgmt_read_write_groups?
   value: ((management_access_auth_scheme.mgmt_read_write_groups))
 - type: replace
-  path: /instance_groups/name=Medium-HA-VMR/properties/ldap_mgmt_admin_groups?
+  path: /instance_groups/name=enterprise-large-ha/properties/config/settings/ldap_mgmt_admin_groups?
   value: ((management_access_auth_scheme.mgmt_admin_groups))
 - type: replace
-  path: /instance_groups/name=Medium-HA-VMR/properties/ldap_mgmt_read_only_groups?
+  path: /instance_groups/name=enterprise-large-ha/properties/config/settings/ldap_mgmt_read_only_groups?
   value: ((management_access_auth_scheme.mgmt_read_only_groups))
 - type: replace
-  path: /instance_groups/name=Medium-HA-VMR/properties/ldap_mgmt_read_write_groups?
+  path: /instance_groups/name=enterprise-large-ha/properties/config/settings/ldap_mgmt_read_write_groups?
   value: ((management_access_auth_scheme.mgmt_read_write_groups))
+
 - type: replace
-  path: /instance_groups/name=Large-HA-VMR/properties/management_access_auth_scheme/value
+  path: /instance_groups/name=standard-medium/properties/config/settings/management_access_auth_scheme/value
   value: ldap_server
 - type: replace
-  path: /instance_groups/name=Large-HA-VMR/properties/management_access_auth_scheme/selected_option?/ldap_mgmt_admin_groups?
+  path: /instance_groups/name=standard-medium/properties/config/settings/management_access_auth_scheme/selected_option?/ldap_mgmt_admin_groups?
   value: ((management_access_auth_scheme.mgmt_admin_groups))
 - type: replace
-  path: /instance_groups/name=Large-HA-VMR/properties/management_access_auth_scheme/selected_option?/ldap_mgmt_read_only_groups?
+  path: /instance_groups/name=standard-medium/properties/config/settings/management_access_auth_scheme/selected_option?/ldap_mgmt_read_only_groups?
   value: ((management_access_auth_scheme.mgmt_read_only_groups))
 - type: replace
-  path: /instance_groups/name=Large-HA-VMR/properties/management_access_auth_scheme/selected_option?/ldap_mgmt_read_write_groups?
+  path: /instance_groups/name=standard-medium/properties/config/settings/management_access_auth_scheme/selected_option?/ldap_mgmt_read_write_groups?
   value: ((management_access_auth_scheme.mgmt_read_write_groups))
 - type: replace
-  path: /instance_groups/name=Large-HA-VMR/properties/ldap_mgmt_admin_groups?
+  path: /instance_groups/name=standard-medium/properties/config/settings/ldap_mgmt_admin_groups?
   value: ((management_access_auth_scheme.mgmt_admin_groups))
 - type: replace
-  path: /instance_groups/name=Large-HA-VMR/properties/ldap_mgmt_read_only_groups?
+  path: /instance_groups/name=standard-medium/properties/config/settings/ldap_mgmt_read_only_groups?
   value: ((management_access_auth_scheme.mgmt_read_only_groups))
 - type: replace
-  path: /instance_groups/name=Large-HA-VMR/properties/ldap_mgmt_read_write_groups?
+  path: /instance_groups/name=standard-medium/properties/config/settings/ldap_mgmt_read_write_groups?
   value: ((management_access_auth_scheme.mgmt_read_write_groups))
+- type: replace
+  path: /instance_groups/name=standard-large/properties/config/settings/management_access_auth_scheme/value
+  value: ldap_server
+- type: replace
+  path: /instance_groups/name=standard-large/properties/config/settings/management_access_auth_scheme/selected_option?/ldap_mgmt_admin_groups?
+  value: ((management_access_auth_scheme.mgmt_admin_groups))
+- type: replace
+  path: /instance_groups/name=standard-large/properties/config/settings/management_access_auth_scheme/selected_option?/ldap_mgmt_read_only_groups?
+  value: ((management_access_auth_scheme.mgmt_read_only_groups))
+- type: replace
+  path: /instance_groups/name=standard-large/properties/config/settings/management_access_auth_scheme/selected_option?/ldap_mgmt_read_write_groups?
+  value: ((management_access_auth_scheme.mgmt_read_write_groups))
+- type: replace
+  path: /instance_groups/name=standard-large/properties/config/settings/ldap_mgmt_admin_groups?
+  value: ((management_access_auth_scheme.mgmt_admin_groups))
+- type: replace
+  path: /instance_groups/name=standard-large/properties/config/settings/ldap_mgmt_read_only_groups?
+  value: ((management_access_auth_scheme.mgmt_read_only_groups))
+- type: replace
+  path: /instance_groups/name=standard-large/properties/config/settings/ldap_mgmt_read_write_groups?
+  value: ((management_access_auth_scheme.mgmt_read_write_groups))
+- type: replace
+  path: /instance_groups/name=standard-medium-ha/properties/config/settings/management_access_auth_scheme/value
+  value: ldap_server
+- type: replace
+  path: /instance_groups/name=standard-medium-ha/properties/config/settings/management_access_auth_scheme/selected_option?/ldap_mgmt_admin_groups?
+  value: ((management_access_auth_scheme.mgmt_admin_groups))
+- type: replace
+  path: /instance_groups/name=standard-medium-ha/properties/config/settings/management_access_auth_scheme/selected_option?/ldap_mgmt_read_only_groups?
+  value: ((management_access_auth_scheme.mgmt_read_only_groups))
+- type: replace
+  path: /instance_groups/name=standard-medium-ha/properties/config/settings/management_access_auth_scheme/selected_option?/ldap_mgmt_read_write_groups?
+  value: ((management_access_auth_scheme.mgmt_read_write_groups))
+- type: replace
+  path: /instance_groups/name=standard-medium-ha/properties/config/settings/ldap_mgmt_admin_groups?
+  value: ((management_access_auth_scheme.mgmt_admin_groups))
+- type: replace
+  path: /instance_groups/name=standard-medium-ha/properties/config/settings/ldap_mgmt_read_only_groups?
+  value: ((management_access_auth_scheme.mgmt_read_only_groups))
+- type: replace
+  path: /instance_groups/name=standard-medium-ha/properties/config/settings/ldap_mgmt_read_write_groups?
+  value: ((management_access_auth_scheme.mgmt_read_write_groups))
+- type: replace
+  path: /instance_groups/name=standard-large-ha/properties/config/settings/management_access_auth_scheme/value
+  value: ldap_server
+- type: replace
+  path: /instance_groups/name=standard-large-ha/properties/config/settings/management_access_auth_scheme/selected_option?/ldap_mgmt_admin_groups?
+  value: ((management_access_auth_scheme.mgmt_admin_groups))
+- type: replace
+  path: /instance_groups/name=standard-large-ha/properties/config/settings/management_access_auth_scheme/selected_option?/ldap_mgmt_read_only_groups?
+  value: ((management_access_auth_scheme.mgmt_read_only_groups))
+- type: replace
+  path: /instance_groups/name=standard-large-ha/properties/config/settings/management_access_auth_scheme/selected_option?/ldap_mgmt_read_write_groups?
+  value: ((management_access_auth_scheme.mgmt_read_write_groups))
+- type: replace
+  path: /instance_groups/name=standard-large-ha/properties/config/settings/ldap_mgmt_admin_groups?
+  value: ((management_access_auth_scheme.mgmt_admin_groups))
+- type: replace
+  path: /instance_groups/name=standard-large-ha/properties/config/settings/ldap_mgmt_read_only_groups?
+  value: ((management_access_auth_scheme.mgmt_read_only_groups))
+- type: replace
+  path: /instance_groups/name=standard-large-ha/properties/config/settings/ldap_mgmt_read_write_groups?
+  value: ((management_access_auth_scheme.mgmt_read_write_groups))
+
 - type: replace
   path: /instance_groups/name=deploy-all/properties/management_access_auth_scheme/value
   value: ldap_server

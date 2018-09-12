@@ -1,0 +1,31 @@
+- type: remove
+  path: /instance_groups/name=deploy-all/properties/mysql_config/selected_option?
+- type: replace
+  path: /instance_groups/name=deploy-all/properties/mysql_config?/value
+  value: internal_ha
+- type: replace
+  path: /instance_groups/name=deploy-all/properties/mysql_config?/internal_ha
+  value: 
+    user: service_broker
+    password: ((cf_mysql_mysql_seeded_databases_service_broker_password))
+- type: replace
+  path: /instance_groups/name=management/instances
+  value: 2
+- type: replace
+  path: /instance_groups/name=arbitrator?
+  value: 
+    name: arbitrator
+    instances: 1
+    azs: [z3]
+    networks: [{name: default}]
+    vm_type: default
+    stemcell: default
+    jobs:
+    - release: cf-mysql
+      name: arbitrator
+      properties:
+        cf_mysql:
+          mysql:
+            admin_password: ((cf_mysql_mysql_admin_password))
+            galera_healthcheck:
+              endpoint_password: ((cf_mysql_mysql_galera_healthcheck_endpoint_password))

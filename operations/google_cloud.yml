@@ -1,19 +1,28 @@
 # Google Cloud
 # This replaces the vm_type elements with Google Cloud types.
 - type: replace
-  path: /instance_groups/name=Community-VMR/vm_type
+  path: /instance_groups/name=enterprise-shared/vm_type
   value: medium.disk
 - type: replace
-  path: /instance_groups/name=Shared-VMR/vm_type
+  path: /instance_groups/name=enterprise-medium-ha/vm_type
   value: medium.disk
 - type: replace
-  path: /instance_groups/name=Medium-HA-VMR/vm_type
-  value: medium.disk
-- type: replace
-  path: /instance_groups/name=Large-VMR/vm_type
+  path: /instance_groups/name=enterprise-large/vm_type
   value: xlarge
 - type: replace
-  path: /instance_groups/name=Large-HA-VMR/vm_type
+  path: /instance_groups/name=enterprise-large-ha/vm_type
+  value: xlarge
+- type: replace
+  path: /instance_groups/name=standard-medium/vm_type
+  value: medium.disk
+- type: replace
+  path: /instance_groups/name=standard-medium-ha/vm_type
+  value: medium.disk
+- type: replace
+  path: /instance_groups/name=standard-large/vm_type
+  value: xlarge
+- type: replace
+  path: /instance_groups/name=standard-large-ha/vm_type
   value: xlarge
 - type: replace
   path: /instance_groups/name=deploy-all/vm_type

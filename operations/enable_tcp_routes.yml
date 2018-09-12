@@ -1,298 +1,477 @@
 - type: replace
-  path: /instance_groups/name=Community-VMR/properties/tcp_routes_config/value
+  path: /instance_groups/name=enterprise-shared/properties/config/settings/tcp_routes_config/value
   value: enabled
 - type: remove
-  path: /instance_groups/name=Community-VMR/properties/tcp_routes_config/selected_option?/tcp_route_enabled?
+  path: /instance_groups/name=enterprise-shared/properties/config/settings/tcp_routes_config/selected_option?/tcp_route_enabled?
 - type: replace
-  path: /instance_groups/name=Community-VMR/properties/tcp_routes_config/selected_option?/amqp_tcp_route_enabled? 
+  path: /instance_groups/name=enterprise-shared/properties/config/settings/tcp_routes_config/selected_option?/amqp_tcp_route_enabled? 
   value: ((tcp_routes_config.amqp_tcp_route_enabled))
 - type: replace
-  path: /instance_groups/name=Community-VMR/properties/tcp_routes_config/selected_option?/amqp_tls_tcp_route_enabled? 
+  path: /instance_groups/name=enterprise-shared/properties/config/settings/tcp_routes_config/selected_option?/amqp_tls_tcp_route_enabled? 
   value: ((tcp_routes_config.amqp_tls_tcp_route_enabled))
 - type: replace
-  path: /instance_groups/name=Community-VMR/properties/tcp_routes_config/selected_option?/cf_credentials?/identity?
+  path: /instance_groups/name=enterprise-shared/properties/config/settings/tcp_routes_config/selected_option?/cf_credentials?/identity?
   value: ((tcp_routes_config.solace_router_client.id))
 - type: replace
-  path: /instance_groups/name=Community-VMR/properties/tcp_routes_config/selected_option?/cf_credentials?/password? 
+  path: /instance_groups/name=enterprise-shared/properties/config/settings/tcp_routes_config/selected_option?/cf_credentials?/password? 
   value: ((tcp_routes_config.solace_router_client.secret))
 - type: replace
-  path: /instance_groups/name=Community-VMR/properties/cf_client_id?
+  path: /instance_groups/name=enterprise-shared/properties/config/env/cf_client_id?
   value: ((tcp_routes_config.solace_router_client.id))
 - type: replace
-  path: /instance_groups/name=Community-VMR/properties/cf_client_secret?
+  path: /instance_groups/name=enterprise-shared/properties/cf_client_secret?
   value: ((tcp_routes_config.solace_router_client.secret))
 - type: replace
-  path: /instance_groups/name=Community-VMR/properties/tcp_routes_config/selected_option?/mqtt_tcp_route_enabled?
+  path: /instance_groups/name=enterprise-shared/properties/config/settings/tcp_routes_config/selected_option?/mqtt_tcp_route_enabled?
   value: ((tcp_routes_config.mqtt_tcp_route_enabled)) 
 - type: replace
-  path: /instance_groups/name=Community-VMR/properties/tcp_routes_config/selected_option?/mqtt_tls_tcp_route_enabled?
+  path: /instance_groups/name=enterprise-shared/properties/config/settings/tcp_routes_config/selected_option?/mqtt_tls_tcp_route_enabled?
   value: ((tcp_routes_config.mqtt_tls_tcp_route_enabled))
 - type: replace
-  path: /instance_groups/name=Community-VMR/properties/tcp_routes_config/selected_option?/mqtt_ws_tcp_route_enabled?
+  path: /instance_groups/name=enterprise-shared/properties/config/settings/tcp_routes_config/selected_option?/mqtt_ws_tcp_route_enabled?
   value: ((tcp_routes_config.mqtt_ws_tcp_route_enabled))
 - type: replace
-  path: /instance_groups/name=Community-VMR/properties/tcp_routes_config/selected_option?/mqtt_wss_tcp_route_enabled?
+  path: /instance_groups/name=enterprise-shared/properties/config/settings/tcp_routes_config/selected_option?/mqtt_wss_tcp_route_enabled?
   value: ((tcp_routes_config.mqtt_wss_tcp_route_enabled))
 - type: replace
-  path: /instance_groups/name=Community-VMR/properties/tcp_routes_config/selected_option?/rest_tcp_route_enabled?
+  path: /instance_groups/name=enterprise-shared/properties/config/settings/tcp_routes_config/selected_option?/rest_tcp_route_enabled?
   value: ((tcp_routes_config.rest_tcp_route_enabled))
 - type: replace
-  path: /instance_groups/name=Community-VMR/properties/tcp_routes_config/selected_option?/rest_tls_tcp_route_enabled? 
+  path: /instance_groups/name=enterprise-shared/properties/config/settings/tcp_routes_config/selected_option?/rest_tls_tcp_route_enabled? 
   value: ((tcp_routes_config.rest_tls_tcp_route_enabled))
 - type: replace
-  path: /instance_groups/name=Community-VMR/properties/tcp_routes_config/selected_option?/smf_tcp_route_enabled?
+  path: /instance_groups/name=enterprise-shared/properties/config/settings/tcp_routes_config/selected_option?/smf_tcp_route_enabled?
   value: ((tcp_routes_config.smf_tcp_route_enabled))
 - type: replace
-  path: /instance_groups/name=Community-VMR/properties/tcp_routes_config/selected_option?/smf_tls_tcp_route_enabled?
+  path: /instance_groups/name=enterprise-shared/properties/config/settings/tcp_routes_config/selected_option?/smf_tls_tcp_route_enabled?
   value: ((tcp_routes_config.smf_tls_tcp_route_enabled))
 - type: replace
-  path: /instance_groups/name=Community-VMR/properties/tcp_routes_config/selected_option?/smf_zip_tcp_route_enabled?
+  path: /instance_groups/name=enterprise-shared/properties/config/settings/tcp_routes_config/selected_option?/smf_zip_tcp_route_enabled?
   value: ((tcp_routes_config.smf_zip_tcp_route_enabled))
 - type: replace
-  path: /instance_groups/name=Community-VMR/properties/tcp_routes_config/selected_option?/web_messaging_tcp_route_enabled?
+  path: /instance_groups/name=enterprise-shared/properties/config/settings/tcp_routes_config/selected_option?/web_messaging_tcp_route_enabled?
   value: ((tcp_routes_config.web_messaging_tcp_route_enabled)) 
 - type: replace
-  path: /instance_groups/name=Community-VMR/properties/tcp_routes_config/selected_option?/web_messaging_tls_tcp_route_enabled?
+  path: /instance_groups/name=enterprise-shared/properties/config/settings/tcp_routes_config/selected_option?/web_messaging_tls_tcp_route_enabled?
   value: ((tcp_routes_config.web_messaging_tls_tcp_route_enabled))
 - type: replace
-  path: /instance_groups/name=Community-VMR/properties/tcp_routes_enabled?
+  path: /instance_groups/name=enterprise-shared/properties/config/settings/tcp_routes_enabled?
   value: enabled
 - type: replace
-  path: /instance_groups/name=Shared-VMR/properties/tcp_routes_config/value
+  path: /instance_groups/name=enterprise-large/properties/config/settings/tcp_routes_config/value
   value: enabled
 - type: remove
-  path: /instance_groups/name=Shared-VMR/properties/tcp_routes_config/selected_option?/tcp_route_enabled?
+  path: /instance_groups/name=enterprise-large/properties/config/settings/tcp_routes_config/selected_option?/tcp_route_enabled?
 - type: replace
-  path: /instance_groups/name=Shared-VMR/properties/tcp_routes_config/selected_option?/amqp_tcp_route_enabled? 
+  path: /instance_groups/name=enterprise-large/properties/config/settings/tcp_routes_config/selected_option?/amqp_tcp_route_enabled? 
   value: ((tcp_routes_config.amqp_tcp_route_enabled))
 - type: replace
-  path: /instance_groups/name=Shared-VMR/properties/tcp_routes_config/selected_option?/amqp_tls_tcp_route_enabled? 
+  path: /instance_groups/name=enterprise-large/properties/config/settings/tcp_routes_config/selected_option?/amqp_tls_tcp_route_enabled? 
   value: ((tcp_routes_config.amqp_tls_tcp_route_enabled))
 - type: replace
-  path: /instance_groups/name=Shared-VMR/properties/tcp_routes_config/selected_option?/cf_credentials?/identity?
+  path: /instance_groups/name=enterprise-large/properties/config/settings/tcp_routes_config/selected_option?/cf_credentials?/identity?
   value: ((tcp_routes_config.solace_router_client.id))
 - type: replace
-  path: /instance_groups/name=Shared-VMR/properties/tcp_routes_config/selected_option?/cf_credentials?/password? 
+  path: /instance_groups/name=enterprise-large/properties/config/settings/tcp_routes_config/selected_option?/cf_credentials?/password? 
   value: ((tcp_routes_config.solace_router_client.secret))
 - type: replace
-  path: /instance_groups/name=Shared-VMR/properties/cf_client_id?
+  path: /instance_groups/name=enterprise-large/properties/config/env/cf_client_id?
   value: ((tcp_routes_config.solace_router_client.id))
 - type: replace
-  path: /instance_groups/name=Shared-VMR/properties/cf_client_secret?
+  path: /instance_groups/name=enterprise-large/properties/cf_client_secret?
   value: ((tcp_routes_config.solace_router_client.secret))
 - type: replace
-  path: /instance_groups/name=Shared-VMR/properties/tcp_routes_config/selected_option?/mqtt_tcp_route_enabled?
+  path: /instance_groups/name=enterprise-large/properties/config/settings/tcp_routes_config/selected_option?/mqtt_tcp_route_enabled?
   value: ((tcp_routes_config.mqtt_tcp_route_enabled)) 
 - type: replace
-  path: /instance_groups/name=Shared-VMR/properties/tcp_routes_config/selected_option?/mqtt_tls_tcp_route_enabled?
+  path: /instance_groups/name=enterprise-large/properties/config/settings/tcp_routes_config/selected_option?/mqtt_tls_tcp_route_enabled?
   value: ((tcp_routes_config.mqtt_tls_tcp_route_enabled))
 - type: replace
-  path: /instance_groups/name=Shared-VMR/properties/tcp_routes_config/selected_option?/mqtt_ws_tcp_route_enabled?
+  path: /instance_groups/name=enterprise-large/properties/config/settings/tcp_routes_config/selected_option?/mqtt_ws_tcp_route_enabled?
   value: ((tcp_routes_config.mqtt_ws_tcp_route_enabled))
 - type: replace
-  path: /instance_groups/name=Shared-VMR/properties/tcp_routes_config/selected_option?/mqtt_wss_tcp_route_enabled?
+  path: /instance_groups/name=enterprise-large/properties/config/settings/tcp_routes_config/selected_option?/mqtt_wss_tcp_route_enabled?
   value: ((tcp_routes_config.mqtt_wss_tcp_route_enabled))
 - type: replace
-  path: /instance_groups/name=Shared-VMR/properties/tcp_routes_config/selected_option?/rest_tcp_route_enabled?
+  path: /instance_groups/name=enterprise-large/properties/config/settings/tcp_routes_config/selected_option?/rest_tcp_route_enabled?
   value: ((tcp_routes_config.rest_tcp_route_enabled))
 - type: replace
-  path: /instance_groups/name=Shared-VMR/properties/tcp_routes_config/selected_option?/rest_tls_tcp_route_enabled? 
+  path: /instance_groups/name=enterprise-large/properties/config/settings/tcp_routes_config/selected_option?/rest_tls_tcp_route_enabled? 
   value: ((tcp_routes_config.rest_tls_tcp_route_enabled))
 - type: replace
-  path: /instance_groups/name=Shared-VMR/properties/tcp_routes_config/selected_option?/smf_tcp_route_enabled?
+  path: /instance_groups/name=enterprise-large/properties/config/settings/tcp_routes_config/selected_option?/smf_tcp_route_enabled?
   value: ((tcp_routes_config.smf_tcp_route_enabled))
 - type: replace
-  path: /instance_groups/name=Shared-VMR/properties/tcp_routes_config/selected_option?/smf_tls_tcp_route_enabled?
+  path: /instance_groups/name=enterprise-large/properties/config/settings/tcp_routes_config/selected_option?/smf_tls_tcp_route_enabled?
   value: ((tcp_routes_config.smf_tls_tcp_route_enabled))
 - type: replace
-  path: /instance_groups/name=Shared-VMR/properties/tcp_routes_config/selected_option?/smf_zip_tcp_route_enabled?
+  path: /instance_groups/name=enterprise-large/properties/config/settings/tcp_routes_config/selected_option?/smf_zip_tcp_route_enabled?
   value: ((tcp_routes_config.smf_zip_tcp_route_enabled))
 - type: replace
-  path: /instance_groups/name=Shared-VMR/properties/tcp_routes_config/selected_option?/web_messaging_tcp_route_enabled?
+  path: /instance_groups/name=enterprise-large/properties/config/settings/tcp_routes_config/selected_option?/web_messaging_tcp_route_enabled?
   value: ((tcp_routes_config.web_messaging_tcp_route_enabled)) 
 - type: replace
-  path: /instance_groups/name=Shared-VMR/properties/tcp_routes_config/selected_option?/web_messaging_tls_tcp_route_enabled?
+  path: /instance_groups/name=enterprise-large/properties/config/settings/tcp_routes_config/selected_option?/web_messaging_tls_tcp_route_enabled?
   value: ((tcp_routes_config.web_messaging_tls_tcp_route_enabled))
 - type: replace
-  path: /instance_groups/name=Shared-VMR/properties/tcp_routes_enabled?
+  path: /instance_groups/name=enterprise-large/properties/config/settings/tcp_routes_enabled?
   value: enabled
 - type: replace
-  path: /instance_groups/name=Large-VMR/properties/tcp_routes_config/value
+  path: /instance_groups/name=enterprise-medium-ha/properties/config/settings/tcp_routes_config/value
   value: enabled
 - type: remove
-  path: /instance_groups/name=Large-VMR/properties/tcp_routes_config/selected_option?/tcp_route_enabled?
+  path: /instance_groups/name=enterprise-medium-ha/properties/config/settings/tcp_routes_config/selected_option?/tcp_route_enabled?
 - type: replace
-  path: /instance_groups/name=Large-VMR/properties/tcp_routes_config/selected_option?/amqp_tcp_route_enabled? 
+  path: /instance_groups/name=enterprise-medium-ha/properties/config/settings/tcp_routes_config/selected_option?/amqp_tcp_route_enabled? 
   value: ((tcp_routes_config.amqp_tcp_route_enabled))
 - type: replace
-  path: /instance_groups/name=Large-VMR/properties/tcp_routes_config/selected_option?/amqp_tls_tcp_route_enabled? 
+  path: /instance_groups/name=enterprise-medium-ha/properties/config/settings/tcp_routes_config/selected_option?/amqp_tls_tcp_route_enabled? 
   value: ((tcp_routes_config.amqp_tls_tcp_route_enabled))
 - type: replace
-  path: /instance_groups/name=Large-VMR/properties/tcp_routes_config/selected_option?/cf_credentials?/identity?
+  path: /instance_groups/name=enterprise-medium-ha/properties/config/settings/tcp_routes_config/selected_option?/cf_credentials?/identity?
   value: ((tcp_routes_config.solace_router_client.id))
 - type: replace
-  path: /instance_groups/name=Large-VMR/properties/tcp_routes_config/selected_option?/cf_credentials?/password? 
+  path: /instance_groups/name=enterprise-medium-ha/properties/config/settings/tcp_routes_config/selected_option?/cf_credentials?/password? 
   value: ((tcp_routes_config.solace_router_client.secret))
 - type: replace
-  path: /instance_groups/name=Large-VMR/properties/cf_client_id?
+  path: /instance_groups/name=enterprise-medium-ha/properties/config/env/cf_client_id?
   value: ((tcp_routes_config.solace_router_client.id))
 - type: replace
-  path: /instance_groups/name=Large-VMR/properties/cf_client_secret?
+  path: /instance_groups/name=enterprise-medium-ha/properties/cf_client_secret?
   value: ((tcp_routes_config.solace_router_client.secret))
 - type: replace
-  path: /instance_groups/name=Large-VMR/properties/tcp_routes_config/selected_option?/mqtt_tcp_route_enabled?
+  path: /instance_groups/name=enterprise-medium-ha/properties/config/settings/tcp_routes_config/selected_option?/mqtt_tcp_route_enabled?
   value: ((tcp_routes_config.mqtt_tcp_route_enabled)) 
 - type: replace
-  path: /instance_groups/name=Large-VMR/properties/tcp_routes_config/selected_option?/mqtt_tls_tcp_route_enabled?
+  path: /instance_groups/name=enterprise-medium-ha/properties/config/settings/tcp_routes_config/selected_option?/mqtt_tls_tcp_route_enabled?
   value: ((tcp_routes_config.mqtt_tls_tcp_route_enabled))
 - type: replace
-  path: /instance_groups/name=Large-VMR/properties/tcp_routes_config/selected_option?/mqtt_ws_tcp_route_enabled?
+  path: /instance_groups/name=enterprise-medium-ha/properties/config/settings/tcp_routes_config/selected_option?/mqtt_ws_tcp_route_enabled?
   value: ((tcp_routes_config.mqtt_ws_tcp_route_enabled))
 - type: replace
-  path: /instance_groups/name=Large-VMR/properties/tcp_routes_config/selected_option?/mqtt_wss_tcp_route_enabled?
+  path: /instance_groups/name=enterprise-medium-ha/properties/config/settings/tcp_routes_config/selected_option?/mqtt_wss_tcp_route_enabled?
   value: ((tcp_routes_config.mqtt_wss_tcp_route_enabled))
 - type: replace
-  path: /instance_groups/name=Large-VMR/properties/tcp_routes_config/selected_option?/rest_tcp_route_enabled?
+  path: /instance_groups/name=enterprise-medium-ha/properties/config/settings/tcp_routes_config/selected_option?/rest_tcp_route_enabled?
   value: ((tcp_routes_config.rest_tcp_route_enabled))
 - type: replace
-  path: /instance_groups/name=Large-VMR/properties/tcp_routes_config/selected_option?/rest_tls_tcp_route_enabled? 
+  path: /instance_groups/name=enterprise-medium-ha/properties/config/settings/tcp_routes_config/selected_option?/rest_tls_tcp_route_enabled? 
   value: ((tcp_routes_config.rest_tls_tcp_route_enabled))
 - type: replace
-  path: /instance_groups/name=Large-VMR/properties/tcp_routes_config/selected_option?/smf_tcp_route_enabled?
+  path: /instance_groups/name=enterprise-medium-ha/properties/config/settings/tcp_routes_config/selected_option?/smf_tcp_route_enabled?
   value: ((tcp_routes_config.smf_tcp_route_enabled))
 - type: replace
-  path: /instance_groups/name=Large-VMR/properties/tcp_routes_config/selected_option?/smf_tls_tcp_route_enabled?
+  path: /instance_groups/name=enterprise-medium-ha/properties/config/settings/tcp_routes_config/selected_option?/smf_tls_tcp_route_enabled?
   value: ((tcp_routes_config.smf_tls_tcp_route_enabled))
 - type: replace
-  path: /instance_groups/name=Large-VMR/properties/tcp_routes_config/selected_option?/smf_zip_tcp_route_enabled?
+  path: /instance_groups/name=enterprise-medium-ha/properties/config/settings/tcp_routes_config/selected_option?/smf_zip_tcp_route_enabled?
   value: ((tcp_routes_config.smf_zip_tcp_route_enabled))
 - type: replace
-  path: /instance_groups/name=Large-VMR/properties/tcp_routes_config/selected_option?/web_messaging_tcp_route_enabled?
+  path: /instance_groups/name=enterprise-medium-ha/properties/config/settings/tcp_routes_config/selected_option?/web_messaging_tcp_route_enabled?
   value: ((tcp_routes_config.web_messaging_tcp_route_enabled)) 
 - type: replace
-  path: /instance_groups/name=Large-VMR/properties/tcp_routes_config/selected_option?/web_messaging_tls_tcp_route_enabled?
+  path: /instance_groups/name=enterprise-medium-ha/properties/config/settings/tcp_routes_config/selected_option?/web_messaging_tls_tcp_route_enabled?
   value: ((tcp_routes_config.web_messaging_tls_tcp_route_enabled))
 - type: replace
-  path: /instance_groups/name=Large-VMR/properties/tcp_routes_enabled?
+  path: /instance_groups/name=enterprise-medium-ha/properties/config/settings/tcp_routes_enabled?
   value: enabled
 - type: replace
-  path: /instance_groups/name=Medium-HA-VMR/properties/tcp_routes_config/value
+  path: /instance_groups/name=enterprise-large-ha/properties/config/settings/tcp_routes_config/value
   value: enabled
 - type: remove
-  path: /instance_groups/name=Medium-HA-VMR/properties/tcp_routes_config/selected_option?/tcp_route_enabled?
+  path: /instance_groups/name=enterprise-large-ha/properties/config/settings/tcp_routes_config/selected_option?/tcp_route_enabled?
 - type: replace
-  path: /instance_groups/name=Medium-HA-VMR/properties/tcp_routes_config/selected_option?/amqp_tcp_route_enabled? 
+  path: /instance_groups/name=enterprise-large-ha/properties/config/settings/tcp_routes_config/selected_option?/amqp_tcp_route_enabled? 
   value: ((tcp_routes_config.amqp_tcp_route_enabled))
 - type: replace
-  path: /instance_groups/name=Medium-HA-VMR/properties/tcp_routes_config/selected_option?/amqp_tls_tcp_route_enabled? 
+  path: /instance_groups/name=enterprise-large-ha/properties/config/settings/tcp_routes_config/selected_option?/amqp_tls_tcp_route_enabled? 
   value: ((tcp_routes_config.amqp_tls_tcp_route_enabled))
 - type: replace
-  path: /instance_groups/name=Medium-HA-VMR/properties/tcp_routes_config/selected_option?/cf_credentials?/identity?
+  path: /instance_groups/name=enterprise-large-ha/properties/config/settings/tcp_routes_config/selected_option?/cf_credentials?/identity?
   value: ((tcp_routes_config.solace_router_client.id))
 - type: replace
-  path: /instance_groups/name=Medium-HA-VMR/properties/tcp_routes_config/selected_option?/cf_credentials?/password? 
+  path: /instance_groups/name=enterprise-large-ha/properties/config/settings/tcp_routes_config/selected_option?/cf_credentials?/password? 
   value: ((tcp_routes_config.solace_router_client.secret))
 - type: replace
-  path: /instance_groups/name=Medium-HA-VMR/properties/cf_client_id?
+  path: /instance_groups/name=enterprise-large-ha/properties/config/env/cf_client_id?
   value: ((tcp_routes_config.solace_router_client.id))
 - type: replace
-  path: /instance_groups/name=Medium-HA-VMR/properties/cf_client_secret?
+  path: /instance_groups/name=enterprise-large-ha/properties/cf_client_secret?
   value: ((tcp_routes_config.solace_router_client.secret))
 - type: replace
-  path: /instance_groups/name=Medium-HA-VMR/properties/tcp_routes_config/selected_option?/mqtt_tcp_route_enabled?
+  path: /instance_groups/name=enterprise-large-ha/properties/config/settings/tcp_routes_config/selected_option?/mqtt_tcp_route_enabled?
   value: ((tcp_routes_config.mqtt_tcp_route_enabled)) 
 - type: replace
-  path: /instance_groups/name=Medium-HA-VMR/properties/tcp_routes_config/selected_option?/mqtt_tls_tcp_route_enabled?
+  path: /instance_groups/name=enterprise-large-ha/properties/config/settings/tcp_routes_config/selected_option?/mqtt_tls_tcp_route_enabled?
   value: ((tcp_routes_config.mqtt_tls_tcp_route_enabled))
 - type: replace
-  path: /instance_groups/name=Medium-HA-VMR/properties/tcp_routes_config/selected_option?/mqtt_ws_tcp_route_enabled?
+  path: /instance_groups/name=enterprise-large-ha/properties/config/settings/tcp_routes_config/selected_option?/mqtt_ws_tcp_route_enabled?
   value: ((tcp_routes_config.mqtt_ws_tcp_route_enabled))
 - type: replace
-  path: /instance_groups/name=Medium-HA-VMR/properties/tcp_routes_config/selected_option?/mqtt_wss_tcp_route_enabled?
+  path: /instance_groups/name=enterprise-large-ha/properties/config/settings/tcp_routes_config/selected_option?/mqtt_wss_tcp_route_enabled?
   value: ((tcp_routes_config.mqtt_wss_tcp_route_enabled))
 - type: replace
-  path: /instance_groups/name=Medium-HA-VMR/properties/tcp_routes_config/selected_option?/rest_tcp_route_enabled?
+  path: /instance_groups/name=enterprise-large-ha/properties/config/settings/tcp_routes_config/selected_option?/rest_tcp_route_enabled?
   value: ((tcp_routes_config.rest_tcp_route_enabled))
 - type: replace
-  path: /instance_groups/name=Medium-HA-VMR/properties/tcp_routes_config/selected_option?/rest_tls_tcp_route_enabled? 
+  path: /instance_groups/name=enterprise-large-ha/properties/config/settings/tcp_routes_config/selected_option?/rest_tls_tcp_route_enabled? 
   value: ((tcp_routes_config.rest_tls_tcp_route_enabled))
 - type: replace
-  path: /instance_groups/name=Medium-HA-VMR/properties/tcp_routes_config/selected_option?/smf_tcp_route_enabled?
+  path: /instance_groups/name=enterprise-large-ha/properties/config/settings/tcp_routes_config/selected_option?/smf_tcp_route_enabled?
   value: ((tcp_routes_config.smf_tcp_route_enabled))
 - type: replace
-  path: /instance_groups/name=Medium-HA-VMR/properties/tcp_routes_config/selected_option?/smf_tls_tcp_route_enabled?
+  path: /instance_groups/name=enterprise-large-ha/properties/config/settings/tcp_routes_config/selected_option?/smf_tls_tcp_route_enabled?
   value: ((tcp_routes_config.smf_tls_tcp_route_enabled))
 - type: replace
-  path: /instance_groups/name=Medium-HA-VMR/properties/tcp_routes_config/selected_option?/smf_zip_tcp_route_enabled?
+  path: /instance_groups/name=enterprise-large-ha/properties/config/settings/tcp_routes_config/selected_option?/smf_zip_tcp_route_enabled?
   value: ((tcp_routes_config.smf_zip_tcp_route_enabled))
 - type: replace
-  path: /instance_groups/name=Medium-HA-VMR/properties/tcp_routes_config/selected_option?/web_messaging_tcp_route_enabled?
+  path: /instance_groups/name=enterprise-large-ha/properties/config/settings/tcp_routes_config/selected_option?/web_messaging_tcp_route_enabled?
   value: ((tcp_routes_config.web_messaging_tcp_route_enabled)) 
 - type: replace
-  path: /instance_groups/name=Medium-HA-VMR/properties/tcp_routes_config/selected_option?/web_messaging_tls_tcp_route_enabled?
+  path: /instance_groups/name=enterprise-large-ha/properties/config/settings/tcp_routes_config/selected_option?/web_messaging_tls_tcp_route_enabled?
   value: ((tcp_routes_config.web_messaging_tls_tcp_route_enabled))
 - type: replace
-  path: /instance_groups/name=Medium-HA-VMR/properties/tcp_routes_enabled?
+  path: /instance_groups/name=enterprise-large-ha/properties/config/settings/tcp_routes_enabled?
   value: enabled
+
 - type: replace
-  path: /instance_groups/name=Large-HA-VMR/properties/tcp_routes_config/value
+  path: /instance_groups/name=standard-medium/properties/config/settings/tcp_routes_config/value
   value: enabled
 - type: remove
-  path: /instance_groups/name=Large-HA-VMR/properties/tcp_routes_config/selected_option?/tcp_route_enabled?
+  path: /instance_groups/name=standard-medium/properties/config/settings/tcp_routes_config/selected_option?/tcp_route_enabled?
 - type: replace
-  path: /instance_groups/name=Large-HA-VMR/properties/tcp_routes_config/selected_option?/amqp_tcp_route_enabled? 
+  path: /instance_groups/name=standard-medium/properties/config/settings/tcp_routes_config/selected_option?/amqp_tcp_route_enabled? 
   value: ((tcp_routes_config.amqp_tcp_route_enabled))
 - type: replace
-  path: /instance_groups/name=Large-HA-VMR/properties/tcp_routes_config/selected_option?/amqp_tls_tcp_route_enabled? 
+  path: /instance_groups/name=standard-medium/properties/config/settings/tcp_routes_config/selected_option?/amqp_tls_tcp_route_enabled? 
   value: ((tcp_routes_config.amqp_tls_tcp_route_enabled))
 - type: replace
-  path: /instance_groups/name=Large-HA-VMR/properties/tcp_routes_config/selected_option?/cf_credentials?/identity?
+  path: /instance_groups/name=standard-medium/properties/config/settings/tcp_routes_config/selected_option?/cf_credentials?/identity?
   value: ((tcp_routes_config.solace_router_client.id))
 - type: replace
-  path: /instance_groups/name=Large-HA-VMR/properties/tcp_routes_config/selected_option?/cf_credentials?/password? 
+  path: /instance_groups/name=standard-medium/properties/config/settings/tcp_routes_config/selected_option?/cf_credentials?/password? 
   value: ((tcp_routes_config.solace_router_client.secret))
 - type: replace
-  path: /instance_groups/name=Large-HA-VMR/properties/cf_client_id?
+  path: /instance_groups/name=standard-medium/properties/config/env/cf_client_id?
   value: ((tcp_routes_config.solace_router_client.id))
 - type: replace
-  path: /instance_groups/name=Large-HA-VMR/properties/cf_client_secret?
+  path: /instance_groups/name=standard-medium/properties/cf_client_secret?
   value: ((tcp_routes_config.solace_router_client.secret))
 - type: replace
-  path: /instance_groups/name=Large-HA-VMR/properties/tcp_routes_config/selected_option?/mqtt_tcp_route_enabled?
+  path: /instance_groups/name=standard-medium/properties/config/settings/tcp_routes_config/selected_option?/mqtt_tcp_route_enabled?
   value: ((tcp_routes_config.mqtt_tcp_route_enabled)) 
 - type: replace
-  path: /instance_groups/name=Large-HA-VMR/properties/tcp_routes_config/selected_option?/mqtt_tls_tcp_route_enabled?
+  path: /instance_groups/name=standard-medium/properties/config/settings/tcp_routes_config/selected_option?/mqtt_tls_tcp_route_enabled?
   value: ((tcp_routes_config.mqtt_tls_tcp_route_enabled))
 - type: replace
-  path: /instance_groups/name=Large-HA-VMR/properties/tcp_routes_config/selected_option?/mqtt_ws_tcp_route_enabled?
+  path: /instance_groups/name=standard-medium/properties/config/settings/tcp_routes_config/selected_option?/mqtt_ws_tcp_route_enabled?
   value: ((tcp_routes_config.mqtt_ws_tcp_route_enabled))
 - type: replace
-  path: /instance_groups/name=Large-HA-VMR/properties/tcp_routes_config/selected_option?/mqtt_wss_tcp_route_enabled?
+  path: /instance_groups/name=standard-medium/properties/config/settings/tcp_routes_config/selected_option?/mqtt_wss_tcp_route_enabled?
   value: ((tcp_routes_config.mqtt_wss_tcp_route_enabled))
 - type: replace
-  path: /instance_groups/name=Large-HA-VMR/properties/tcp_routes_config/selected_option?/rest_tcp_route_enabled?
+  path: /instance_groups/name=standard-medium/properties/config/settings/tcp_routes_config/selected_option?/rest_tcp_route_enabled?
   value: ((tcp_routes_config.rest_tcp_route_enabled))
 - type: replace
-  path: /instance_groups/name=Large-HA-VMR/properties/tcp_routes_config/selected_option?/rest_tls_tcp_route_enabled? 
+  path: /instance_groups/name=standard-medium/properties/config/settings/tcp_routes_config/selected_option?/rest_tls_tcp_route_enabled? 
   value: ((tcp_routes_config.rest_tls_tcp_route_enabled))
 - type: replace
-  path: /instance_groups/name=Large-HA-VMR/properties/tcp_routes_config/selected_option?/smf_tcp_route_enabled?
+  path: /instance_groups/name=standard-medium/properties/config/settings/tcp_routes_config/selected_option?/smf_tcp_route_enabled?
   value: ((tcp_routes_config.smf_tcp_route_enabled))
 - type: replace
-  path: /instance_groups/name=Large-HA-VMR/properties/tcp_routes_config/selected_option?/smf_tls_tcp_route_enabled?
+  path: /instance_groups/name=standard-medium/properties/config/settings/tcp_routes_config/selected_option?/smf_tls_tcp_route_enabled?
   value: ((tcp_routes_config.smf_tls_tcp_route_enabled))
 - type: replace
-  path: /instance_groups/name=Large-HA-VMR/properties/tcp_routes_config/selected_option?/smf_zip_tcp_route_enabled?
+  path: /instance_groups/name=standard-medium/properties/config/settings/tcp_routes_config/selected_option?/smf_zip_tcp_route_enabled?
   value: ((tcp_routes_config.smf_zip_tcp_route_enabled))
 - type: replace
-  path: /instance_groups/name=Large-HA-VMR/properties/tcp_routes_config/selected_option?/web_messaging_tcp_route_enabled?
+  path: /instance_groups/name=standard-medium/properties/config/settings/tcp_routes_config/selected_option?/web_messaging_tcp_route_enabled?
   value: ((tcp_routes_config.web_messaging_tcp_route_enabled)) 
 - type: replace
-  path: /instance_groups/name=Large-HA-VMR/properties/tcp_routes_config/selected_option?/web_messaging_tls_tcp_route_enabled?
+  path: /instance_groups/name=standard-medium/properties/config/settings/tcp_routes_config/selected_option?/web_messaging_tls_tcp_route_enabled?
   value: ((tcp_routes_config.web_messaging_tls_tcp_route_enabled))
 - type: replace
-  path: /instance_groups/name=Large-HA-VMR/properties/tcp_routes_enabled?
+  path: /instance_groups/name=standard-medium/properties/config/settings/tcp_routes_enabled?
   value: enabled
+- type: replace
+  path: /instance_groups/name=standard-large/properties/config/settings/tcp_routes_config/value
+  value: enabled
+- type: remove
+  path: /instance_groups/name=standard-large/properties/config/settings/tcp_routes_config/selected_option?/tcp_route_enabled?
+- type: replace
+  path: /instance_groups/name=standard-large/properties/config/settings/tcp_routes_config/selected_option?/amqp_tcp_route_enabled? 
+  value: ((tcp_routes_config.amqp_tcp_route_enabled))
+- type: replace
+  path: /instance_groups/name=standard-large/properties/config/settings/tcp_routes_config/selected_option?/amqp_tls_tcp_route_enabled? 
+  value: ((tcp_routes_config.amqp_tls_tcp_route_enabled))
+- type: replace
+  path: /instance_groups/name=standard-large/properties/config/settings/tcp_routes_config/selected_option?/cf_credentials?/identity?
+  value: ((tcp_routes_config.solace_router_client.id))
+- type: replace
+  path: /instance_groups/name=standard-large/properties/config/settings/tcp_routes_config/selected_option?/cf_credentials?/password? 
+  value: ((tcp_routes_config.solace_router_client.secret))
+- type: replace
+  path: /instance_groups/name=standard-large/properties/config/env/cf_client_id?
+  value: ((tcp_routes_config.solace_router_client.id))
+- type: replace
+  path: /instance_groups/name=standard-large/properties/cf_client_secret?
+  value: ((tcp_routes_config.solace_router_client.secret))
+- type: replace
+  path: /instance_groups/name=standard-large/properties/config/settings/tcp_routes_config/selected_option?/mqtt_tcp_route_enabled?
+  value: ((tcp_routes_config.mqtt_tcp_route_enabled)) 
+- type: replace
+  path: /instance_groups/name=standard-large/properties/config/settings/tcp_routes_config/selected_option?/mqtt_tls_tcp_route_enabled?
+  value: ((tcp_routes_config.mqtt_tls_tcp_route_enabled))
+- type: replace
+  path: /instance_groups/name=standard-large/properties/config/settings/tcp_routes_config/selected_option?/mqtt_ws_tcp_route_enabled?
+  value: ((tcp_routes_config.mqtt_ws_tcp_route_enabled))
+- type: replace
+  path: /instance_groups/name=standard-large/properties/config/settings/tcp_routes_config/selected_option?/mqtt_wss_tcp_route_enabled?
+  value: ((tcp_routes_config.mqtt_wss_tcp_route_enabled))
+- type: replace
+  path: /instance_groups/name=standard-large/properties/config/settings/tcp_routes_config/selected_option?/rest_tcp_route_enabled?
+  value: ((tcp_routes_config.rest_tcp_route_enabled))
+- type: replace
+  path: /instance_groups/name=standard-large/properties/config/settings/tcp_routes_config/selected_option?/rest_tls_tcp_route_enabled? 
+  value: ((tcp_routes_config.rest_tls_tcp_route_enabled))
+- type: replace
+  path: /instance_groups/name=standard-large/properties/config/settings/tcp_routes_config/selected_option?/smf_tcp_route_enabled?
+  value: ((tcp_routes_config.smf_tcp_route_enabled))
+- type: replace
+  path: /instance_groups/name=standard-large/properties/config/settings/tcp_routes_config/selected_option?/smf_tls_tcp_route_enabled?
+  value: ((tcp_routes_config.smf_tls_tcp_route_enabled))
+- type: replace
+  path: /instance_groups/name=standard-large/properties/config/settings/tcp_routes_config/selected_option?/smf_zip_tcp_route_enabled?
+  value: ((tcp_routes_config.smf_zip_tcp_route_enabled))
+- type: replace
+  path: /instance_groups/name=standard-large/properties/config/settings/tcp_routes_config/selected_option?/web_messaging_tcp_route_enabled?
+  value: ((tcp_routes_config.web_messaging_tcp_route_enabled)) 
+- type: replace
+  path: /instance_groups/name=standard-large/properties/config/settings/tcp_routes_config/selected_option?/web_messaging_tls_tcp_route_enabled?
+  value: ((tcp_routes_config.web_messaging_tls_tcp_route_enabled))
+- type: replace
+  path: /instance_groups/name=standard-large/properties/config/settings/tcp_routes_enabled?
+  value: enabled
+- type: replace
+  path: /instance_groups/name=standard-medium-ha/properties/config/settings/tcp_routes_config/value
+  value: enabled
+- type: remove
+  path: /instance_groups/name=standard-medium-ha/properties/config/settings/tcp_routes_config/selected_option?/tcp_route_enabled?
+- type: replace
+  path: /instance_groups/name=standard-medium-ha/properties/config/settings/tcp_routes_config/selected_option?/amqp_tcp_route_enabled? 
+  value: ((tcp_routes_config.amqp_tcp_route_enabled))
+- type: replace
+  path: /instance_groups/name=standard-medium-ha/properties/config/settings/tcp_routes_config/selected_option?/amqp_tls_tcp_route_enabled? 
+  value: ((tcp_routes_config.amqp_tls_tcp_route_enabled))
+- type: replace
+  path: /instance_groups/name=standard-medium-ha/properties/config/settings/tcp_routes_config/selected_option?/cf_credentials?/identity?
+  value: ((tcp_routes_config.solace_router_client.id))
+- type: replace
+  path: /instance_groups/name=standard-medium-ha/properties/config/settings/tcp_routes_config/selected_option?/cf_credentials?/password? 
+  value: ((tcp_routes_config.solace_router_client.secret))
+- type: replace
+  path: /instance_groups/name=standard-medium-ha/properties/config/env/cf_client_id?
+  value: ((tcp_routes_config.solace_router_client.id))
+- type: replace
+  path: /instance_groups/name=standard-medium-ha/properties/cf_client_secret?
+  value: ((tcp_routes_config.solace_router_client.secret))
+- type: replace
+  path: /instance_groups/name=standard-medium-ha/properties/config/settings/tcp_routes_config/selected_option?/mqtt_tcp_route_enabled?
+  value: ((tcp_routes_config.mqtt_tcp_route_enabled)) 
+- type: replace
+  path: /instance_groups/name=standard-medium-ha/properties/config/settings/tcp_routes_config/selected_option?/mqtt_tls_tcp_route_enabled?
+  value: ((tcp_routes_config.mqtt_tls_tcp_route_enabled))
+- type: replace
+  path: /instance_groups/name=standard-medium-ha/properties/config/settings/tcp_routes_config/selected_option?/mqtt_ws_tcp_route_enabled?
+  value: ((tcp_routes_config.mqtt_ws_tcp_route_enabled))
+- type: replace
+  path: /instance_groups/name=standard-medium-ha/properties/config/settings/tcp_routes_config/selected_option?/mqtt_wss_tcp_route_enabled?
+  value: ((tcp_routes_config.mqtt_wss_tcp_route_enabled))
+- type: replace
+  path: /instance_groups/name=standard-medium-ha/properties/config/settings/tcp_routes_config/selected_option?/rest_tcp_route_enabled?
+  value: ((tcp_routes_config.rest_tcp_route_enabled))
+- type: replace
+  path: /instance_groups/name=standard-medium-ha/properties/config/settings/tcp_routes_config/selected_option?/rest_tls_tcp_route_enabled? 
+  value: ((tcp_routes_config.rest_tls_tcp_route_enabled))
+- type: replace
+  path: /instance_groups/name=standard-medium-ha/properties/config/settings/tcp_routes_config/selected_option?/smf_tcp_route_enabled?
+  value: ((tcp_routes_config.smf_tcp_route_enabled))
+- type: replace
+  path: /instance_groups/name=standard-medium-ha/properties/config/settings/tcp_routes_config/selected_option?/smf_tls_tcp_route_enabled?
+  value: ((tcp_routes_config.smf_tls_tcp_route_enabled))
+- type: replace
+  path: /instance_groups/name=standard-medium-ha/properties/config/settings/tcp_routes_config/selected_option?/smf_zip_tcp_route_enabled?
+  value: ((tcp_routes_config.smf_zip_tcp_route_enabled))
+- type: replace
+  path: /instance_groups/name=standard-medium-ha/properties/config/settings/tcp_routes_config/selected_option?/web_messaging_tcp_route_enabled?
+  value: ((tcp_routes_config.web_messaging_tcp_route_enabled)) 
+- type: replace
+  path: /instance_groups/name=standard-medium-ha/properties/config/settings/tcp_routes_config/selected_option?/web_messaging_tls_tcp_route_enabled?
+  value: ((tcp_routes_config.web_messaging_tls_tcp_route_enabled))
+- type: replace
+  path: /instance_groups/name=standard-medium-ha/properties/config/settings/tcp_routes_enabled?
+  value: enabled
+- type: replace
+  path: /instance_groups/name=standard-large-ha/properties/config/settings/tcp_routes_config/value
+  value: enabled
+- type: remove
+  path: /instance_groups/name=standard-large-ha/properties/config/settings/tcp_routes_config/selected_option?/tcp_route_enabled?
+- type: replace
+  path: /instance_groups/name=standard-large-ha/properties/config/settings/tcp_routes_config/selected_option?/amqp_tcp_route_enabled? 
+  value: ((tcp_routes_config.amqp_tcp_route_enabled))
+- type: replace
+  path: /instance_groups/name=standard-large-ha/properties/config/settings/tcp_routes_config/selected_option?/amqp_tls_tcp_route_enabled? 
+  value: ((tcp_routes_config.amqp_tls_tcp_route_enabled))
+- type: replace
+  path: /instance_groups/name=standard-large-ha/properties/config/settings/tcp_routes_config/selected_option?/cf_credentials?/identity?
+  value: ((tcp_routes_config.solace_router_client.id))
+- type: replace
+  path: /instance_groups/name=standard-large-ha/properties/config/settings/tcp_routes_config/selected_option?/cf_credentials?/password? 
+  value: ((tcp_routes_config.solace_router_client.secret))
+- type: replace
+  path: /instance_groups/name=standard-large-ha/properties/config/env/cf_client_id?
+  value: ((tcp_routes_config.solace_router_client.id))
+- type: replace
+  path: /instance_groups/name=standard-large-ha/properties/cf_client_secret?
+  value: ((tcp_routes_config.solace_router_client.secret))
+- type: replace
+  path: /instance_groups/name=standard-large-ha/properties/config/settings/tcp_routes_config/selected_option?/mqtt_tcp_route_enabled?
+  value: ((tcp_routes_config.mqtt_tcp_route_enabled)) 
+- type: replace
+  path: /instance_groups/name=standard-large-ha/properties/config/settings/tcp_routes_config/selected_option?/mqtt_tls_tcp_route_enabled?
+  value: ((tcp_routes_config.mqtt_tls_tcp_route_enabled))
+- type: replace
+  path: /instance_groups/name=standard-large-ha/properties/config/settings/tcp_routes_config/selected_option?/mqtt_ws_tcp_route_enabled?
+  value: ((tcp_routes_config.mqtt_ws_tcp_route_enabled))
+- type: replace
+  path: /instance_groups/name=standard-large-ha/properties/config/settings/tcp_routes_config/selected_option?/mqtt_wss_tcp_route_enabled?
+  value: ((tcp_routes_config.mqtt_wss_tcp_route_enabled))
+- type: replace
+  path: /instance_groups/name=standard-large-ha/properties/config/settings/tcp_routes_config/selected_option?/rest_tcp_route_enabled?
+  value: ((tcp_routes_config.rest_tcp_route_enabled))
+- type: replace
+  path: /instance_groups/name=standard-large-ha/properties/config/settings/tcp_routes_config/selected_option?/rest_tls_tcp_route_enabled? 
+  value: ((tcp_routes_config.rest_tls_tcp_route_enabled))
+- type: replace
+  path: /instance_groups/name=standard-large-ha/properties/config/settings/tcp_routes_config/selected_option?/smf_tcp_route_enabled?
+  value: ((tcp_routes_config.smf_tcp_route_enabled))
+- type: replace
+  path: /instance_groups/name=standard-large-ha/properties/config/settings/tcp_routes_config/selected_option?/smf_tls_tcp_route_enabled?
+  value: ((tcp_routes_config.smf_tls_tcp_route_enabled))
+- type: replace
+  path: /instance_groups/name=standard-large-ha/properties/config/settings/tcp_routes_config/selected_option?/smf_zip_tcp_route_enabled?
+  value: ((tcp_routes_config.smf_zip_tcp_route_enabled))
+- type: replace
+  path: /instance_groups/name=standard-large-ha/properties/config/settings/tcp_routes_config/selected_option?/web_messaging_tcp_route_enabled?
+  value: ((tcp_routes_config.web_messaging_tcp_route_enabled)) 
+- type: replace
+  path: /instance_groups/name=standard-large-ha/properties/config/settings/tcp_routes_config/selected_option?/web_messaging_tls_tcp_route_enabled?
+  value: ((tcp_routes_config.web_messaging_tls_tcp_route_enabled))
+- type: replace
+  path: /instance_groups/name=standard-large-ha/properties/config/settings/tcp_routes_enabled?
+  value: enabled
+
 - type: replace
   path: /instance_groups/name=deploy-all/properties/tcp_routes_config/value
   value: enabled

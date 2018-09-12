@@ -1,267 +1,422 @@
 # Note that management and application access authentication are still set to vmr_internal, use -o operations/set_management_access_ldap.yml and -o operations/set_application_access_ldap.yml for these to use ldap server
 - type: replace
-  path: /instance_groups/name=Community-VMR/properties/ldap_config/value
+  path: /instance_groups/name=enterprise-shared/properties/config/settings/ldap_config/value
   value: enabled
 - type: replace
-  path: /instance_groups/name=Community-VMR/properties/ldap_config/selected_option?/ldap_credentials?/ldap_admin_password? 
+  path: /instance_groups/name=enterprise-shared/properties/config/settings/ldap_config/selected_option?/ldap_credentials/password
   value: ((ldap.password))
 - type: replace
-  path: /instance_groups/name=Community-VMR/properties/ldap_config/selected_option?/ldap_credentials?/ldap_admin_username? 
+  path: /instance_groups/name=enterprise-shared/properties/config/settings/ldap_config/selected_option?/ldap_credentials/identity
   value: ((ldap.username))
 - type: replace
-  path: /instance_groups/name=Community-VMR/properties/ldap_config/selected_option?/ldap_group_membership_attribute_name?
+  path: /instance_groups/name=enterprise-shared/properties/config/settings/ldap_config/selected_option?/ldap_group_membership_attribute_name?
   value: memberOf
 - type: replace
-  path: /instance_groups/name=Community-VMR/properties/ldap_config/selected_option?/ldap_server_url?
+  path: /instance_groups/name=enterprise-shared/properties/config/settings/ldap_config/selected_option?/ldap_server_url?
   value: ((ldap.server_url))
 - type: replace
-  path: /instance_groups/name=Community-VMR/properties/ldap_config/selected_option?/ldap_start_tls?
+  path: /instance_groups/name=enterprise-shared/properties/config/settings/ldap_config/selected_option?/ldap_start_tls?
   value: disabled
 - type: replace
-  path: /instance_groups/name=Community-VMR/properties/ldap_config/selected_option?/ldap_user_search_base?
+  path: /instance_groups/name=enterprise-shared/properties/config/settings/ldap_config/selected_option?/ldap_user_search_base?
   value: ((ldap.user_search_base))
 - type: replace
-  path: /instance_groups/name=Community-VMR/properties/ldap_config/selected_option?/ldap_user_search_filter?
+  path: /instance_groups/name=enterprise-shared/properties/config/settings/ldap_config/selected_option?/ldap_user_search_filter?
   value: '(cn=$CLIENT_USERNAME)'
 - type: replace
-  path: /instance_groups/name=Community-VMR/properties/ldap_admin_password? 
+  path: /instance_groups/name=enterprise-shared/properties/config/settings/ldap_admin_password?
   value: ((ldap.password))
 - type: replace
-  path: /instance_groups/name=Community-VMR/properties/ldap_admin_username? 
+  path: /instance_groups/name=enterprise-shared/properties/config/settings/ldap_admin_username?
   value: ((ldap.username))
 - type: replace
-  path: /instance_groups/name=Community-VMR/properties/ldap_group_membership_attribute_name?
+  path: /instance_groups/name=enterprise-shared/properties/config/settings/ldap_group_membership_attribute_name?
   value: memberOf
 - type: replace
-  path: /instance_groups/name=Community-VMR/properties/ldap_server_url?
+  path: /instance_groups/name=enterprise-shared/properties/config/settings/ldap_server_url?
   value: ((ldap.server_url))
 - type: replace
-  path: /instance_groups/name=Community-VMR/properties/ldap_start_tls?
+  path: /instance_groups/name=enterprise-shared/properties/config/settings/ldap_start_tls?
   value: disabled
 - type: replace
-  path: /instance_groups/name=Community-VMR/properties/ldap_user_search_base?
+  path: /instance_groups/name=enterprise-shared/properties/config/settings/ldap_user_search_base?
   value: ((ldap.user_search_base))
 - type: replace
-  path: /instance_groups/name=Community-VMR/properties/ldap_user_search_filter?
+  path: /instance_groups/name=enterprise-shared/properties/config/settings/ldap_user_search_filter?
   value: '(cn=$CLIENT_USERNAME)'
 - type: replace
-  path: /instance_groups/name=Community-VMR/properties/management_access_auth_scheme/value
+  path: /instance_groups/name=enterprise-shared/properties/config/settings/management_access_auth_scheme/value
   value: vmr_internal
 - type: replace
-  path: /instance_groups/name=Community-VMR/properties/application_access_auth_scheme/value
+  path: /instance_groups/name=enterprise-shared/properties/config/settings/application_access_auth_scheme/value
   value: vmr_internal
 - type: replace
-  path: /instance_groups/name=Shared-VMR/properties/ldap_config/value
+  path: /instance_groups/name=enterprise-large/properties/config/settings/ldap_config/value
   value: enabled
 - type: replace
-  path: /instance_groups/name=Shared-VMR/properties/ldap_config/selected_option?/ldap_credentials?/ldap_admin_password?
+  path: /instance_groups/name=enterprise-large/properties/config/settings/ldap_config/selected_option?/ldap_credentials/password
   value: ((ldap.password))
 - type: replace
-  path: /instance_groups/name=Shared-VMR/properties/ldap_config/selected_option?/ldap_credentials?/ldap_admin_username?
+  path: /instance_groups/name=enterprise-large/properties/config/settings/ldap_config/selected_option?/ldap_credentials/identity
   value: ((ldap.username))
 - type: replace
-  path: /instance_groups/name=Shared-VMR/properties/ldap_config/selected_option?/ldap_group_membership_attribute_name?
+  path: /instance_groups/name=enterprise-large/properties/config/settings/ldap_config/selected_option?/ldap_group_membership_attribute_name?
   value: memberOf
 - type: replace
-  path: /instance_groups/name=Shared-VMR/properties/ldap_config/selected_option?/ldap_server_url?
+  path: /instance_groups/name=enterprise-large/properties/config/settings/ldap_config/selected_option?/ldap_server_url?
   value: ((ldap.server_url))
 - type: replace
-  path: /instance_groups/name=Shared-VMR/properties/ldap_config/selected_option?/ldap_start_tls?
+  path: /instance_groups/name=enterprise-large/properties/config/settings/ldap_config/selected_option?/ldap_start_tls?
   value: disabled
 - type: replace
-  path: /instance_groups/name=Shared-VMR/properties/ldap_config/selected_option?/ldap_user_search_base?
+  path: /instance_groups/name=enterprise-large/properties/config/settings/ldap_config/selected_option?/ldap_user_search_base?
   value: ((ldap.user_search_base))
 - type: replace
-  path: /instance_groups/name=Shared-VMR/properties/ldap_config/selected_option?/ldap_user_search_filter?
+  path: /instance_groups/name=enterprise-large/properties/config/settings/ldap_config/selected_option?/ldap_user_search_filter?
   value: '(cn=$CLIENT_USERNAME)'
 - type: replace
-  path: /instance_groups/name=Shared-VMR/properties/ldap_admin_password?
+  path: /instance_groups/name=enterprise-large/properties/config/settings/ldap_admin_password?
   value: ((ldap.password))
 - type: replace
-  path: /instance_groups/name=Shared-VMR/properties/ldap_admin_username?
+  path: /instance_groups/name=enterprise-large/properties/config/settings/ldap_admin_username?
   value: ((ldap.username))
 - type: replace
-  path: /instance_groups/name=Shared-VMR/properties/ldap_group_membership_attribute_name?
+  path: /instance_groups/name=enterprise-large/properties/config/settings/ldap_group_membership_attribute_name?
   value: memberOf
 - type: replace
-  path: /instance_groups/name=Shared-VMR/properties/ldap_server_url?
+  path: /instance_groups/name=enterprise-large/properties/config/settings/ldap_server_url?
   value: ((ldap.server_url))
 - type: replace
-  path: /instance_groups/name=Shared-VMR/properties/ldap_start_tls?
+  path: /instance_groups/name=enterprise-large/properties/config/settings/ldap_start_tls?
   value: disabled
 - type: replace
-  path: /instance_groups/name=Shared-VMR/properties/ldap_user_search_base?
+  path: /instance_groups/name=enterprise-large/properties/config/settings/ldap_user_search_base?
   value: ((ldap.user_search_base))
 - type: replace
-  path: /instance_groups/name=Shared-VMR/properties/ldap_user_search_filter?
+  path: /instance_groups/name=enterprise-large/properties/config/settings/ldap_user_search_filter?
   value: '(cn=$CLIENT_USERNAME)'
 - type: replace
-  path: /instance_groups/name=Shared-VMR/properties/management_access_auth_scheme/value
+  path: /instance_groups/name=enterprise-large/properties/config/settings/management_access_auth_scheme/value
   value: vmr_internal
 - type: replace
-  path: /instance_groups/name=Shared-VMR/properties/application_access_auth_scheme/value
-  value: vmr_internal
-- type: replace
-  path: /instance_groups/name=Large-VMR/properties/ldap_config/value
-  value: enabled
-- type: replace
-  path: /instance_groups/name=Large-VMR/properties/ldap_config/selected_option?/ldap_credentials?/ldap_admin_password?
-  value: ((ldap.password))
-- type: replace
-  path: /instance_groups/name=Large-VMR/properties/ldap_config/selected_option?/ldap_credentials?/ldap_admin_username?
-  value: ((ldap.username))
-- type: replace
-  path: /instance_groups/name=Large-VMR/properties/ldap_config/selected_option?/ldap_group_membership_attribute_name?
-  value: memberOf
-- type: replace
-  path: /instance_groups/name=Large-VMR/properties/ldap_config/selected_option?/ldap_server_url?
-  value: ((ldap.server_url))
-- type: replace
-  path: /instance_groups/name=Large-VMR/properties/ldap_config/selected_option?/ldap_start_tls?
-  value: disabled
-- type: replace
-  path: /instance_groups/name=Large-VMR/properties/ldap_config/selected_option?/ldap_user_search_base?
-  value: ((ldap.user_search_base))
-- type: replace
-  path: /instance_groups/name=Large-VMR/properties/ldap_config/selected_option?/ldap_user_search_filter?
-  value: '(cn=$CLIENT_USERNAME)'
-- type: replace
-  path: /instance_groups/name=Large-VMR/properties/ldap_admin_password?
-  value: ((ldap.password))
-- type: replace
-  path: /instance_groups/name=Large-VMR/properties/ldap_admin_username?
-  value: ((ldap.username))
-- type: replace
-  path: /instance_groups/name=Large-VMR/properties/ldap_group_membership_attribute_name?
-  value: memberOf
-- type: replace
-  path: /instance_groups/name=Large-VMR/properties/ldap_server_url?
-  value: ((ldap.server_url))
-- type: replace
-  path: /instance_groups/name=Large-VMR/properties/ldap_start_tls?
-  value: disabled
-- type: replace
-  path: /instance_groups/name=Large-VMR/properties/ldap_user_search_base?
-  value: ((ldap.user_search_base))
-- type: replace
-  path: /instance_groups/name=Large-VMR/properties/ldap_user_search_filter?
-  value: '(cn=$CLIENT_USERNAME)'
-- type: replace
-  path: /instance_groups/name=Large-VMR/properties/management_access_auth_scheme/value
-  value: vmr_internal
-- type: replace
-  path: /instance_groups/name=Large-VMR/properties/application_access_auth_scheme/value
+  path: /instance_groups/name=enterprise-large/properties/config/settings/application_access_auth_scheme/value
   value: vmr_internal
 - type: replace 
-  path: /instance_groups/name=Medium-HA-VMR/properties/ldap_config/value
+  path: /instance_groups/name=enterprise-medium-ha/properties/config/settings/ldap_config/value
   value: enabled
 - type: replace
-  path: /instance_groups/name=Medium-HA-VMR/properties/ldap_config/selected_option?/ldap_credentials?/ldap_admin_password?
+  path: /instance_groups/name=enterprise-medium-ha/properties/config/settings/ldap_config/selected_option?/ldap_credentials/password
   value: ((ldap.password))
 - type: replace
-  path: /instance_groups/name=Medium-HA-VMR/properties/ldap_config/selected_option?/ldap_credentials?/ldap_admin_username?
+  path: /instance_groups/name=enterprise-medium-ha/properties/config/settings/ldap_config/selected_option?/ldap_credentials/identity
   value: ((ldap.username))
 - type: replace
-  path: /instance_groups/name=Medium-HA-VMR/properties/ldap_config/selected_option?/ldap_group_membership_attribute_name?
+  path: /instance_groups/name=enterprise-medium-ha/properties/config/settings/ldap_config/selected_option?/ldap_group_membership_attribute_name?
   value: memberOf
 - type: replace
-  path: /instance_groups/name=Medium-HA-VMR/properties/ldap_config/selected_option?/ldap_server_url?
+  path: /instance_groups/name=enterprise-medium-ha/properties/config/settings/ldap_config/selected_option?/ldap_server_url?
   value: ((ldap.server_url))
 - type: replace
-  path: /instance_groups/name=Medium-HA-VMR/properties/ldap_config/selected_option?/ldap_start_tls?
+  path: /instance_groups/name=enterprise-medium-ha/properties/config/settings/ldap_config/selected_option?/ldap_start_tls?
   value: disabled
 - type: replace
-  path: /instance_groups/name=Medium-HA-VMR/properties/ldap_config/selected_option?/ldap_user_search_base?
+  path: /instance_groups/name=enterprise-medium-ha/properties/config/settings/ldap_config/selected_option?/ldap_user_search_base?
   value: ((ldap.user_search_base))
 - type: replace
-  path: /instance_groups/name=Medium-HA-VMR/properties/ldap_config/selected_option?/ldap_user_search_filter?
+  path: /instance_groups/name=enterprise-medium-ha/properties/config/settings/ldap_config/selected_option?/ldap_user_search_filter?
   value: '(cn=$CLIENT_USERNAME)'
 - type: replace
-  path: /instance_groups/name=Medium-HA-VMR/properties/ldap_admin_password?
+  path: /instance_groups/name=enterprise-medium-ha/properties/config/settings/ldap_admin_password?
   value: ((ldap.password))
 - type: replace
-  path: /instance_groups/name=Medium-HA-VMR/properties/ldap_admin_username?
+  path: /instance_groups/name=enterprise-medium-ha/properties/config/settings/ldap_admin_username?
   value: ((ldap.username))
 - type: replace
-  path: /instance_groups/name=Medium-HA-VMR/properties/ldap_group_membership_attribute_name?
+  path: /instance_groups/name=enterprise-medium-ha/properties/config/settings/ldap_group_membership_attribute_name?
   value: memberOf
 - type: replace
-  path: /instance_groups/name=Medium-HA-VMR/properties/ldap_server_url?
+  path: /instance_groups/name=enterprise-medium-ha/properties/config/settings/ldap_server_url?
   value: ((ldap.server_url))
 - type: replace
-  path: /instance_groups/name=Medium-HA-VMR/properties/ldap_start_tls?
+  path: /instance_groups/name=enterprise-medium-ha/properties/config/settings/ldap_start_tls?
   value: disabled
 - type: replace
-  path: /instance_groups/name=Medium-HA-VMR/properties/ldap_user_search_base?
+  path: /instance_groups/name=enterprise-medium-ha/properties/config/settings/ldap_user_search_base?
   value: ((ldap.user_search_base))
 - type: replace
-  path: /instance_groups/name=Medium-HA-VMR/properties/ldap_user_search_filter?
+  path: /instance_groups/name=enterprise-medium-ha/properties/config/settings/ldap_user_search_filter?
   value: '(cn=$CLIENT_USERNAME)'
 - type: replace
-  path: /instance_groups/name=Medium-HA-VMR/properties/management_access_auth_scheme/value
+  path: /instance_groups/name=enterprise-medium-ha/properties/config/settings/management_access_auth_scheme/value
   value: vmr_internal
 - type: replace
-  path: /instance_groups/name=Medium-HA-VMR/properties/application_access_auth_scheme/value
+  path: /instance_groups/name=enterprise-medium-ha/properties/config/settings/application_access_auth_scheme/value
   value: vmr_internal
 - type: replace
-  path: /instance_groups/name=Large-HA-VMR/properties/ldap_config/value
+  path: /instance_groups/name=enterprise-large-ha/properties/config/settings/ldap_config/value
   value: enabled
 - type: replace
-  path: /instance_groups/name=Large-HA-VMR/properties/ldap_config/selected_option?/ldap_credentials?/ldap_admin_password?
+  path: /instance_groups/name=enterprise-large-ha/properties/config/settings/ldap_config/selected_option?/ldap_credentials/password
   value: ((ldap.password))
 - type: replace
-  path: /instance_groups/name=Large-HA-VMR/properties/ldap_config/selected_option?/ldap_credentials?/ldap_admin_username?
+  path: /instance_groups/name=enterprise-large-ha/properties/config/settings/ldap_config/selected_option?/ldap_credentials/identity
   value: ((ldap.username))
 - type: replace
-  path: /instance_groups/name=Large-HA-VMR/properties/ldap_config/selected_option?/ldap_group_membership_attribute_name?
+  path: /instance_groups/name=enterprise-large-ha/properties/config/settings/ldap_config/selected_option?/ldap_group_membership_attribute_name?
   value: memberOf
 - type: replace
-  path: /instance_groups/name=Large-HA-VMR/properties/ldap_config/selected_option?/ldap_server_url?
+  path: /instance_groups/name=enterprise-large-ha/properties/config/settings/ldap_config/selected_option?/ldap_server_url?
   value: ((ldap.server_url))
 - type: replace
-  path: /instance_groups/name=Large-HA-VMR/properties/ldap_config/selected_option?/ldap_start_tls?
+  path: /instance_groups/name=enterprise-large-ha/properties/config/settings/ldap_config/selected_option?/ldap_start_tls?
   value: disabled
 - type: replace
-  path: /instance_groups/name=Large-HA-VMR/properties/ldap_config/selected_option?/ldap_user_search_base?
+  path: /instance_groups/name=enterprise-large-ha/properties/config/settings/ldap_config/selected_option?/ldap_user_search_base?
   value: ((ldap.user_search_base))
 - type: replace
-  path: /instance_groups/name=Large-HA-VMR/properties/ldap_config/selected_option?/ldap_user_search_filter?
+  path: /instance_groups/name=enterprise-large-ha/properties/config/settings/ldap_config/selected_option?/ldap_user_search_filter?
   value: '(cn=$CLIENT_USERNAME)'
 - type: replace
-  path: /instance_groups/name=Large-HA-VMR/properties/ldap_admin_password?
+  path: /instance_groups/name=enterprise-large-ha/properties/config/settings/ldap_admin_password?
   value: ((ldap.password))
 - type: replace
-  path: /instance_groups/name=Large-HA-VMR/properties/ldap_admin_username?
+  path: /instance_groups/name=enterprise-large-ha/properties/config/settings/ldap_admin_username?
   value: ((ldap.username))
 - type: replace
-  path: /instance_groups/name=Large-HA-VMR/properties/ldap_group_membership_attribute_name?
+  path: /instance_groups/name=enterprise-large-ha/properties/config/settings/ldap_group_membership_attribute_name?
   value: memberOf
 - type: replace
-  path: /instance_groups/name=Large-HA-VMR/properties/ldap_server_url?
+  path: /instance_groups/name=enterprise-large-ha/properties/config/settings/ldap_server_url?
   value: ((ldap.server_url))
 - type: replace
-  path: /instance_groups/name=Large-HA-VMR/properties/ldap_start_tls?
+  path: /instance_groups/name=enterprise-large-ha/properties/config/settings/ldap_start_tls?
   value: disabled
 - type: replace
-  path: /instance_groups/name=Large-HA-VMR/properties/ldap_user_search_base?
+  path: /instance_groups/name=enterprise-large-ha/properties/config/settings/ldap_user_search_base?
   value: ((ldap.user_search_base))
 - type: replace
-  path: /instance_groups/name=Large-HA-VMR/properties/ldap_user_search_filter?
+  path: /instance_groups/name=enterprise-large-ha/properties/config/settings/ldap_user_search_filter?
   value: '(cn=$CLIENT_USERNAME)'
 - type: replace
-  path: /instance_groups/name=Large-HA-VMR/properties/management_access_auth_scheme/value
+  path: /instance_groups/name=enterprise-large-ha/properties/config/settings/management_access_auth_scheme/value
   value: vmr_internal
 - type: replace
-  path: /instance_groups/name=Large-HA-VMR/properties/application_access_auth_scheme/value
+  path: /instance_groups/name=enterprise-large-ha/properties/config/settings/application_access_auth_scheme/value
   value: vmr_internal
+  
+- type: replace
+  path: /instance_groups/name=standard-medium/properties/config/settings/ldap_config/value
+  value: enabled
+- type: replace
+  path: /instance_groups/name=standard-medium/properties/config/settings/ldap_config/selected_option?/ldap_credentials/password
+  value: ((ldap.password))
+- type: replace
+  path: /instance_groups/name=standard-medium/properties/config/settings/ldap_config/selected_option?/ldap_credentials/identity
+  value: ((ldap.username))
+- type: replace
+  path: /instance_groups/name=standard-medium/properties/config/settings/ldap_config/selected_option?/ldap_group_membership_attribute_name?
+  value: memberOf
+- type: replace
+  path: /instance_groups/name=standard-medium/properties/config/settings/ldap_config/selected_option?/ldap_server_url?
+  value: ((ldap.server_url))
+- type: replace
+  path: /instance_groups/name=standard-medium/properties/config/settings/ldap_config/selected_option?/ldap_start_tls?
+  value: disabled
+- type: replace
+  path: /instance_groups/name=standard-medium/properties/config/settings/ldap_config/selected_option?/ldap_user_search_base?
+  value: ((ldap.user_search_base))
+- type: replace
+  path: /instance_groups/name=standard-medium/properties/config/settings/ldap_config/selected_option?/ldap_user_search_filter?
+  value: '(cn=$CLIENT_USERNAME)'
+- type: replace
+  path: /instance_groups/name=standard-medium/properties/config/settings/ldap_admin_password?
+  value: ((ldap.password))
+- type: replace
+  path: /instance_groups/name=standard-medium/properties/config/settings/ldap_admin_username?
+  value: ((ldap.username))
+- type: replace
+  path: /instance_groups/name=standard-medium/properties/config/settings/ldap_group_membership_attribute_name?
+  value: memberOf
+- type: replace
+  path: /instance_groups/name=standard-medium/properties/config/settings/ldap_server_url?
+  value: ((ldap.server_url))
+- type: replace
+  path: /instance_groups/name=standard-medium/properties/config/settings/ldap_start_tls?
+  value: disabled
+- type: replace
+  path: /instance_groups/name=standard-medium/properties/config/settings/ldap_user_search_base?
+  value: ((ldap.user_search_base))
+- type: replace
+  path: /instance_groups/name=standard-medium/properties/config/settings/ldap_user_search_filter?
+  value: '(cn=$CLIENT_USERNAME)'
+- type: replace
+  path: /instance_groups/name=standard-medium/properties/config/settings/management_access_auth_scheme/value
+  value: vmr_internal
+- type: replace
+  path: /instance_groups/name=standard-medium/properties/config/settings/application_access_auth_scheme/value
+  value: vmr_internal
+- type: replace
+  path: /instance_groups/name=standard-large/properties/config/settings/ldap_config/value
+  value: enabled
+- type: replace
+  path: /instance_groups/name=standard-large/properties/config/settings/ldap_config/selected_option?/ldap_credentials/password
+  value: ((ldap.password))
+- type: replace
+  path: /instance_groups/name=standard-large/properties/config/settings/ldap_config/selected_option?/ldap_credentials/identity
+  value: ((ldap.username))
+- type: replace
+  path: /instance_groups/name=standard-large/properties/config/settings/ldap_config/selected_option?/ldap_group_membership_attribute_name?
+  value: memberOf
+- type: replace
+  path: /instance_groups/name=standard-large/properties/config/settings/ldap_config/selected_option?/ldap_server_url?
+  value: ((ldap.server_url))
+- type: replace
+  path: /instance_groups/name=standard-large/properties/config/settings/ldap_config/selected_option?/ldap_start_tls?
+  value: disabled
+- type: replace
+  path: /instance_groups/name=standard-large/properties/config/settings/ldap_config/selected_option?/ldap_user_search_base?
+  value: ((ldap.user_search_base))
+- type: replace
+  path: /instance_groups/name=standard-large/properties/config/settings/ldap_config/selected_option?/ldap_user_search_filter?
+  value: '(cn=$CLIENT_USERNAME)'
+- type: replace
+  path: /instance_groups/name=standard-large/properties/config/settings/ldap_admin_password?
+  value: ((ldap.password))
+- type: replace
+  path: /instance_groups/name=standard-large/properties/config/settings/ldap_admin_username?
+  value: ((ldap.username))
+- type: replace
+  path: /instance_groups/name=standard-large/properties/config/settings/ldap_group_membership_attribute_name?
+  value: memberOf
+- type: replace
+  path: /instance_groups/name=standard-large/properties/config/settings/ldap_server_url?
+  value: ((ldap.server_url))
+- type: replace
+  path: /instance_groups/name=standard-large/properties/config/settings/ldap_start_tls?
+  value: disabled
+- type: replace
+  path: /instance_groups/name=standard-large/properties/config/settings/ldap_user_search_base?
+  value: ((ldap.user_search_base))
+- type: replace
+  path: /instance_groups/name=standard-large/properties/config/settings/ldap_user_search_filter?
+  value: '(cn=$CLIENT_USERNAME)'
+- type: replace
+  path: /instance_groups/name=standard-large/properties/config/settings/management_access_auth_scheme/value
+  value: vmr_internal
+- type: replace
+  path: /instance_groups/name=standard-large/properties/config/settings/application_access_auth_scheme/value
+  value: vmr_internal
+- type: replace 
+  path: /instance_groups/name=standard-medium-ha/properties/config/settings/ldap_config/value
+  value: enabled
+- type: replace
+  path: /instance_groups/name=standard-medium-ha/properties/config/settings/ldap_config/selected_option?/ldap_credentials/password
+  value: ((ldap.password))
+- type: replace
+  path: /instance_groups/name=standard-medium-ha/properties/config/settings/ldap_config/selected_option?/ldap_credentials/identity
+  value: ((ldap.username))
+- type: replace
+  path: /instance_groups/name=standard-medium-ha/properties/config/settings/ldap_config/selected_option?/ldap_group_membership_attribute_name?
+  value: memberOf
+- type: replace
+  path: /instance_groups/name=standard-medium-ha/properties/config/settings/ldap_config/selected_option?/ldap_server_url?
+  value: ((ldap.server_url))
+- type: replace
+  path: /instance_groups/name=standard-medium-ha/properties/config/settings/ldap_config/selected_option?/ldap_start_tls?
+  value: disabled
+- type: replace
+  path: /instance_groups/name=standard-medium-ha/properties/config/settings/ldap_config/selected_option?/ldap_user_search_base?
+  value: ((ldap.user_search_base))
+- type: replace
+  path: /instance_groups/name=standard-medium-ha/properties/config/settings/ldap_config/selected_option?/ldap_user_search_filter?
+  value: '(cn=$CLIENT_USERNAME)'
+- type: replace
+  path: /instance_groups/name=standard-medium-ha/properties/config/settings/ldap_admin_password?
+  value: ((ldap.password))
+- type: replace
+  path: /instance_groups/name=standard-medium-ha/properties/config/settings/ldap_admin_username?
+  value: ((ldap.username))
+- type: replace
+  path: /instance_groups/name=standard-medium-ha/properties/config/settings/ldap_group_membership_attribute_name?
+  value: memberOf
+- type: replace
+  path: /instance_groups/name=standard-medium-ha/properties/config/settings/ldap_server_url?
+  value: ((ldap.server_url))
+- type: replace
+  path: /instance_groups/name=standard-medium-ha/properties/config/settings/ldap_start_tls?
+  value: disabled
+- type: replace
+  path: /instance_groups/name=standard-medium-ha/properties/config/settings/ldap_user_search_base?
+  value: ((ldap.user_search_base))
+- type: replace
+  path: /instance_groups/name=standard-medium-ha/properties/config/settings/ldap_user_search_filter?
+  value: '(cn=$CLIENT_USERNAME)'
+- type: replace
+  path: /instance_groups/name=standard-medium-ha/properties/config/settings/management_access_auth_scheme/value
+  value: vmr_internal
+- type: replace
+  path: /instance_groups/name=standard-medium-ha/properties/config/settings/application_access_auth_scheme/value
+  value: vmr_internal
+- type: replace
+  path: /instance_groups/name=standard-large-ha/properties/config/settings/ldap_config/value
+  value: enabled
+- type: replace
+  path: /instance_groups/name=standard-large-ha/properties/config/settings/ldap_config/selected_option?/ldap_credentials/password
+  value: ((ldap.password))
+- type: replace
+  path: /instance_groups/name=standard-large-ha/properties/config/settings/ldap_config/selected_option?/ldap_credentials/identity
+  value: ((ldap.username))
+- type: replace
+  path: /instance_groups/name=standard-large-ha/properties/config/settings/ldap_config/selected_option?/ldap_group_membership_attribute_name?
+  value: memberOf
+- type: replace
+  path: /instance_groups/name=standard-large-ha/properties/config/settings/ldap_config/selected_option?/ldap_server_url?
+  value: ((ldap.server_url))
+- type: replace
+  path: /instance_groups/name=standard-large-ha/properties/config/settings/ldap_config/selected_option?/ldap_start_tls?
+  value: disabled
+- type: replace
+  path: /instance_groups/name=standard-large-ha/properties/config/settings/ldap_config/selected_option?/ldap_user_search_base?
+  value: ((ldap.user_search_base))
+- type: replace
+  path: /instance_groups/name=standard-large-ha/properties/config/settings/ldap_config/selected_option?/ldap_user_search_filter?
+  value: '(cn=$CLIENT_USERNAME)'
+- type: replace
+  path: /instance_groups/name=standard-large-ha/properties/config/settings/ldap_admin_password?
+  value: ((ldap.password))
+- type: replace
+  path: /instance_groups/name=standard-large-ha/properties/config/settings/ldap_admin_username?
+  value: ((ldap.username))
+- type: replace
+  path: /instance_groups/name=standard-large-ha/properties/config/settings/ldap_group_membership_attribute_name?
+  value: memberOf
+- type: replace
+  path: /instance_groups/name=standard-large-ha/properties/config/settings/ldap_server_url?
+  value: ((ldap.server_url))
+- type: replace
+  path: /instance_groups/name=standard-large-ha/properties/config/settings/ldap_start_tls?
+  value: disabled
+- type: replace
+  path: /instance_groups/name=standard-large-ha/properties/config/settings/ldap_user_search_base?
+  value: ((ldap.user_search_base))
+- type: replace
+  path: /instance_groups/name=standard-large-ha/properties/config/settings/ldap_user_search_filter?
+  value: '(cn=$CLIENT_USERNAME)'
+- type: replace
+  path: /instance_groups/name=standard-large-ha/properties/config/settings/management_access_auth_scheme/value
+  value: vmr_internal
+- type: replace
+  path: /instance_groups/name=standard-large-ha/properties/config/settings/application_access_auth_scheme/value
+  value: vmr_internal
+
 - type: replace
   path: /instance_groups/name=deploy-all/properties/ldap_config/value
   value: enabled
 - type: replace
-  path: /instance_groups/name=deploy-all/properties/ldap_config/selected_option?/ldap_credentials?/ldap_admin_password?
+  path: /instance_groups/name=deploy-all/properties/ldap_config/selected_option?/ldap_credentials?/password
   value: ((ldap.password))
 - type: replace
-  path: /instance_groups/name=deploy-all/properties/ldap_config/selected_option?/ldap_credentials?/ldap_admin_username?
+  path: /instance_groups/name=deploy-all/properties/ldap_config/selected_option?/ldap_credentials?/identity
   value: ((ldap.username))
 - type: replace
   path: /instance_groups/name=deploy-all/properties/ldap_config/selected_option?/ldap_group_membership_attribute_name?
@@ -282,10 +437,10 @@
   path: /instance_groups/name=tests/properties/ldap_config/value
   value: enabled
 - type: replace
-  path: /instance_groups/name=tests/properties/ldap_config/selected_option?/ldap_credentials?/ldap_admin_password?
+  path: /instance_groups/name=tests/properties/ldap_config/selected_option?/ldap_credentials/password
   value: ((ldap.password))
 - type: replace
-  path: /instance_groups/name=tests/properties/ldap_config/selected_option?/ldap_credentials?/ldap_admin_username?
+  path: /instance_groups/name=tests/properties/ldap_config/selected_option?/ldap_credentials/identity
   value: ((ldap.username))
 - type: replace
   path: /instance_groups/name=tests/properties/ldap_config/selected_option?/ldap_group_membership_attribute_name?
@@ -306,10 +461,10 @@
   path: /instance_groups/name=delete-all/properties/ldap_config/value
   value: enabled
 - type: replace
-  path: /instance_groups/name=delete-all/properties/ldap_config/selected_option?/ldap_credentials?/ldap_admin_password?
+  path: /instance_groups/name=delete-all/properties/ldap_config/selected_option?/ldap_credentials/password
   value: ((ldap.password))
 - type: replace
-  path: /instance_groups/name=delete-all/properties/ldap_config/selected_option?/ldap_credentials?/ldap_admin_username?
+  path: /instance_groups/name=delete-all/properties/ldap_config/selected_option?/ldap_credentials/identity
   value: ((ldap.username))
 - type: replace
   path: /instance_groups/name=delete-all/properties/ldap_config/selected_option?/ldap_group_membership_attribute_name?

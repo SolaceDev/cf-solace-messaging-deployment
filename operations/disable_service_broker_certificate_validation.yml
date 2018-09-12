@@ -1,19 +1,16 @@
 # Disables service broker's certificate validation when communicating with the VMR
 # This adds certificates
 - type: replace
-  path: /instance_groups/name=Community-VMR/properties/tls_config/selected_option?/broker_validate_cert_disabled?
+  path: /instance_groups/name=enterprise-shared/properties/config/settings/tls_config/selected_option?/broker_validate_cert_disabled?
   value: true
 - type: replace
-  path: /instance_groups/name=Shared-VMR/properties/tls_config/selected_option?/broker_validate_cert_disabled?
+  path: /instance_groups/name=enterprise-medium-ha/properties/config/settings/tls_config/selected_option?/broker_validate_cert_disabled?
   value: true
 - type: replace
-  path: /instance_groups/name=Medium-HA-VMR/properties/tls_config/selected_option?/broker_validate_cert_disabled?
+  path: /instance_groups/name=enterprise-large/properties/config/settings/tls_config/selected_option?/broker_validate_cert_disabled?
   value: true
 - type: replace
-  path: /instance_groups/name=Large-VMR/properties/tls_config/selected_option?/broker_validate_cert_disabled?
-  value: true
-- type: replace
-  path: /instance_groups/name=Large-HA-VMR/properties/tls_config/selected_option?/broker_validate_cert_disabled?
+  path: /instance_groups/name=enterprise-large-ha/properties/config/settings/tls_config/selected_option?/broker_validate_cert_disabled?
   value: true
 - type: replace
   path: /instance_groups/name=deploy-all/properties/tls_config/selected_option?/broker_validate_cert_disabled?
@@ -22,3 +19,15 @@
   path: /instance_groups/name=tests/properties/tls_config/selected_option?/broker_validate_cert_disabled?
   value: true
 
+- type: replace
+  path: /instance_groups/name=standard-medium/properties/config/settings/tls_config/selected_option?/broker_validate_cert_disabled?
+  value: true
+- type: replace
+  path: /instance_groups/name=standard-medium-ha/properties/config/settings/tls_config/selected_option?/broker_validate_cert_disabled?
+  value: true
+- type: replace
+  path: /instance_groups/name=standard-large/properties/config/settings/tls_config/selected_option?/broker_validate_cert_disabled?
+  value: true
+- type: replace
+  path: /instance_groups/name=standard-large-ha/properties/config/settings/tls_config/selected_option?/broker_validate_cert_disabled?
+  value: true

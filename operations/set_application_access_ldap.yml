@@ -1,17 +1,26 @@
 - type: replace
-  path: /instance_groups/name=Community-VMR/properties/application_access_auth_scheme/value
+  path: /instance_groups/name=enterprise-shared/properties/config/settings/application_access_auth_scheme/value
   value: ldap_server
 - type: replace
-  path: /instance_groups/name=Shared-VMR/properties/application_access_auth_scheme/value
+  path: /instance_groups/name=enterprise-large/properties/config/settings/application_access_auth_scheme/value
   value: ldap_server
 - type: replace
-  path: /instance_groups/name=Large-VMR/properties/application_access_auth_scheme/value
+  path: /instance_groups/name=enterprise-medium-ha/properties/config/settings/application_access_auth_scheme/value
   value: ldap_server
 - type: replace
-  path: /instance_groups/name=Medium-HA-VMR/properties/application_access_auth_scheme/value
+  path: /instance_groups/name=enterprise-large-ha/properties/config/settings/application_access_auth_scheme/value
   value: ldap_server
 - type: replace
-  path: /instance_groups/name=Large-HA-VMR/properties/application_access_auth_scheme/value
+  path: /instance_groups/name=standard-medium/properties/config/settings/application_access_auth_scheme/value
+  value: ldap_server
+- type: replace
+  path: /instance_groups/name=standard-large/properties/config/settings/application_access_auth_scheme/value
+  value: ldap_server
+- type: replace
+  path: /instance_groups/name=standard-medium-ha/properties/config/settings/application_access_auth_scheme/value
+  value: ldap_server
+- type: replace
+  path: /instance_groups/name=standard-large-ha/properties/config/settings/application_access_auth_scheme/value
   value: ldap_server
 - type: replace
   path: /instance_groups/name=deploy-all/properties/application_access_auth_scheme/value
