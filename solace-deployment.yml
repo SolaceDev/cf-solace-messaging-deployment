@@ -948,6 +948,8 @@ instance_groups:
     tls_config:
       value: disabled
     vmr_admin_password: ((vmr_admin_password))
+    db_encryption_key: ((db_encryption_key))
+    db_encryption_key_prev: ((db_encryption_key_prev))
 - name: tests
   jobs:
   - name: tests
@@ -1019,6 +1021,8 @@ instance_groups:
     tls_config:
       value: disabled
     vmr_admin_password: ((vmr_admin_password))
+    db_encryption_key: ((db_encryption_key))
+    db_encryption_key_prev: ((db_encryption_key_prev))
 - name: delete-all
   instances: 1
   vm_type: minimal
@@ -1074,6 +1078,8 @@ instance_groups:
     tls_config:
       value: disabled
     vmr_admin_password: ((vmr_admin_password))
+    db_encryption_key: ((db_encryption_key))
+    db_encryption_key_prev: ((db_encryption_key_prev))
   jobs:
   - name: delete-all
     release: solace-pubsub-broker

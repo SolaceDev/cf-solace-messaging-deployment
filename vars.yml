@@ -14,6 +14,13 @@ secure_service_credentials: false
 
 # This is the password set for the "admin" user on the VMR
 vmr_admin_password: admin1
+
+# If set, the password columns will be encrypted in the db.
+db_encryption_key:
+# This should be set to the previous value if the database already exists and 
+# the encryption key is changing..
+db_encryption_key_prev:
+
 ##
 # Control populating each plan with VMRs
 # Note that the "HA" Plans need to be provided in groups of 3
