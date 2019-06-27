@@ -385,6 +385,9 @@
   path: /instance_groups/name=management/jobs/name=deploy-all/properties/tls_config/selected_option?/enable_client_certificates
   value: ((enable_client_certificates))
 - type: replace
+  path: /instance_groups/name=management/jobs/name=deploy-all/properties/tls_config/selected_option?/generate_client_username
+  value: ((client_cert_generate_client_username))
+- type: replace
   path: /instance_groups/name=management/jobs/name=deploy-all/properties/tls_config/selected_option?/rsa_server_cert/private_key_pem?
   value: ((solace_vmr_cert.private_key))
 - type: replace

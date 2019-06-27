@@ -63,6 +63,8 @@ is_shareable: true
 
 # Whether client certificate validation is enabled
 enable_client_certificates: true
+# Whether client usernames, which can be used as common names in client certs, are created at bind time
+client_cert_generate_client_username: false
 
 ## The definition of the plans available for the solace pubsub+ service
 plans:
