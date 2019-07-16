@@ -1297,6 +1297,38 @@ instance_groups:
           allocate_ahead: true
           persistence: true
         plans:
+        - planName: ((plans.appliance_plan_1.name))
+          poolName: appliance-plan-1
+          id: 9842bfe4-f089-4b7c-aa5b-598f9c5f8a9f
+          status: active
+          description: ((plans.appliance_plan_1.description))
+          pointFormDescription:
+            - None
+          maxVpns: ((plans.appliance_plan_1.maxVpns))
+        - planName: ((plans.appliance_plan_2.name))
+          poolName: appliance-plan-2
+          id: ca53fe04-dcee-4d96-90fb-313423ca2793
+          status: active
+          description: ((plans.appliance_plan_2.description))
+          pointFormDescription:
+            - None
+          maxVpns: ((plans.appliance_plan_2.maxVpns))
+        - planName: ((plans.appliance_plan_3.name))
+          poolName: appliance-plan-3
+          id: edb4b6fb-68cc-4ecd-824b-2a96377fe80d
+          status: active
+          description: ((plans.appliance_plan_3.description))
+          pointFormDescription:
+            - None
+          maxVpns: ((plans.appliance_plan_3.maxVpns))
+        - planName: ((plans.appliance_plan_4.name))
+          poolName: appliance-plan-4
+          id: 50972d8e-337a-4d7e-bdeb-8642cd7aeb8a
+          status: active
+          description: ((plans.appliance_plan_4.description))
+          pointFormDescription:
+            - None
+          maxVpns: ((plans.appliance_plan_4.maxVpns))
         - planName: ((plans.standard_medium.name))
           poolName: standard-medium
           id: e5b905d0-965a-11e8-9eb6-529269fb1459
@@ -1540,6 +1572,38 @@ instance_groups:
           allocate_ahead: true
           persistence: true
         plans:
+        - planName: ((plans.appliance_plan_1.name))
+          poolName: appliance-plan-1
+          id: 9842bfe4-f089-4b7c-aa5b-598f9c5f8a9f
+          status: active
+          description: ((plans.appliance_plan_1.description))
+          pointFormDescription:
+            - None
+          maxVpns: ((plans.appliance_plan_1.maxVpns))
+        - planName: ((plans.appliance_plan_2.name))
+          poolName: appliance-plan-2
+          id: ca53fe04-dcee-4d96-90fb-313423ca2793
+          status: active
+          description: ((plans.appliance_plan_2.description))
+          pointFormDescription:
+            - None
+          maxVpns: ((plans.appliance_plan_2.maxVpns))
+        - planName: ((plans.appliance_plan_3.name))
+          poolName: appliance-plan-3
+          id: edb4b6fb-68cc-4ecd-824b-2a96377fe80d
+          status: active
+          description: ((plans.appliance_plan_3.description))
+          pointFormDescription:
+            - None
+          maxVpns: ((plans.appliance_plan_3.maxVpns))
+        - planName: ((plans.appliance_plan_4.name))
+          poolName: appliance-plan-4
+          id: 50972d8e-337a-4d7e-bdeb-8642cd7aeb8a
+          status: active
+          description: ((plans.appliance_plan_4.description))
+          pointFormDescription:
+            - None
+          maxVpns: ((plans.appliance_plan_4.maxVpns))
         - planName: ((plans.standard_medium.name))
           poolName: standard-medium
           id: e5b905d0-965a-11e8-9eb6-529269fb1459

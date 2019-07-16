@@ -1,0 +1,6 @@
+- type: replace
+  path: /instance_groups/name=management/jobs/name=deploy-all/properties/service_catalog_static_inventory/plans/poolName=appliance-plan-1/status
+  value: inactive
+- type: replace
+  path: /instance_groups/name=management/jobs/name=tests/properties/service_catalog_static_inventory/plans/poolName=appliance-plan-1/status
+  value: inactive
