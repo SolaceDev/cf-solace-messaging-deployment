@@ -13,6 +13,8 @@ releases:
   version: ((cf_mysql_version))
 - name: solace-service-adapter
   version: latest
+- name: cf-cli
+  version: latest
 update:
   canaries: 1
   canary_watch_time: 30000-240000
@@ -1205,6 +1207,8 @@ instance_groups:
       max_in_flight: 1
       polling_interval_seconds: 10
       canaries: 1
+  - name: cf-cli-6-linux
+    release: cf-cli
   - name: deploy-all
     release: solace-pubsub-broker
     provides: {}
