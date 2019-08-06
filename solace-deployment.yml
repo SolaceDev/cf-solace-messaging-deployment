@@ -1251,6 +1251,12 @@ instance_groups:
         value: disabled
       binding_config:
         value: ip_addresses
+      oauth_config:
+        selected_option:
+          generate_client_username: false
+        value: disabled
+      oauth_provider_config:
+        value: disabled
       management_access_auth_scheme:
         value: vmr_internal
       org: ((solace_broker_cf_organization))
