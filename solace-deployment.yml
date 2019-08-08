@@ -1209,6 +1209,25 @@ instance_groups:
       canaries: 1
   - name: cf-cli-6-linux
     release: cf-cli
+  - name: broker-logs
+    release: solace-pubsub-broker
+    properties:
+      org: ((solace_broker_cf_organization))
+      space: ((solace_broker_cf_space))
+      domain: ((system_domain))
+      app_domains:
+      - ((app_domain))
+      cf:
+        admin_password: ((cf_admin_password))
+        admin_user: admin
+        ssl_certs: |
+          ((router_ca.certificate))
+          ((application_ca.certificate))
+          ((service_cf_internal_ca.certificate))
+          ((uaa_ca.certificate))
+      ssl:
+        skip_cert_verify: true
+      solace_service_name: ((solace_service_name))
   - name: deploy-all
     release: solace-pubsub-broker
     provides: {}
