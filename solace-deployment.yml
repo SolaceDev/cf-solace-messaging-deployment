@@ -15,6 +15,8 @@ releases:
   version: latest
 - name: cf-cli
   version: latest
+- name: bpm
+  version: latest
 update:
   canaries: 1
   canary_watch_time: 30000-240000
@@ -25,6 +27,11 @@ stemcells:
 - alias: default
   os: ((bosh_stemcell))
   version: ((bosh_stemcell_version))
+addons:
+  - name: bpm
+    jobs:
+    - name: bpm
+      release: bpm
 instance_groups:
 - name: enterprise-shared
   stemcell: default
@@ -726,6 +733,8 @@ instance_groups:
           user_credentials:
             username: admin
             password: ((cf_admin_password))
+      service_adapter:
+        mount_paths: [ /var/vcap/jobs/service-adapter/config/service-adapter.conf ]
       service_deployment:
         releases:
         - name: solace-pubsub
