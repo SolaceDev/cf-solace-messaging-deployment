@@ -1316,12 +1316,12 @@ instance_groups:
             - None
           maxVpns: ((plans.appliance_plan_1.maxVpns))
           limits:
-            credentials_per_vpn: 1500
-            max_connections: 800
-            max_rest_connections: 800
-            max_subscriptions: 50000
-            max_transactions: 6000
-            max_endpoints: 1200
+            credentialsPerVpn: 1500
+            maxConnections: 800
+            maxRestConnections: 800
+            maxSubscriptions: 50000
+            maxTransactions: 6000
+            maxEndpoints: 1200
         - planName: ((plans.appliance_plan_2.name))
           poolName: appliance-plan-2
           id: ca53fe04-dcee-4d96-90fb-313423ca2793
