@@ -1315,6 +1315,13 @@ instance_groups:
           pointFormDescription:
             - None
           maxVpns: ((plans.appliance_plan_1.maxVpns))
+          limits:
+            credentials_per_vpn: 1500
+            max_connections: 800
+            max_rest_connections: 800
+            max_subscriptions: 50000
+            max_transactions: 6000
+            max_endpoints: 1200
         - planName: ((plans.appliance_plan_2.name))
           poolName: appliance-plan-2
           id: ca53fe04-dcee-4d96-90fb-313423ca2793
@@ -1630,6 +1637,22 @@ instance_groups:
           pointFormDescription:
             - None
           maxVpns: ((plans.appliance_plan_4.maxVpns))
+        - planName: ((plans.appliance_plan_5.name))
+          poolName: appliance-plan-5
+          id: 50b38046-fe71-4d74-b3ea-70fe3aba2221
+          status: active
+          description: ((plans.appliance_plan_5.description))
+          pointFormDescription:
+            - None
+          maxVpns: ((plans.appliance_plan_5.maxVpns))
+        - planName: ((plans.appliance_plan_6.name))
+          poolName: appliance-plan-6
+          id: d968c4df-a158-49c0-9f4e-bec8abb6c1ce
+          status: active
+          description: ((plans.appliance_plan_6.description))
+          pointFormDescription:
+            - None
+          maxVpns: ((plans.appliance_plan_6.maxVpns))
         - planName: ((plans.standard_medium.name))
           poolName: standard-medium
           id: e5b905d0-965a-11e8-9eb6-529269fb1459
