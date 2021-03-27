@@ -1920,12 +1920,6 @@ instance_groups:
     - dockerfile: |2-
                   FROM solace-app:latest
                   HEALTHCHECK CMD (printenv service_semp_port | xargs -I % bash -c "netstat -tulpn | egrep '0.0.0.0:%'") && (printenv nodetype | xargs -I % test % == "monitoring" || printenv service_healthcheck_port | xargs -I % bash -c "netstat -tulpn | egrep '0.0.0.0:%'") && (printenv service_semp_port | xargs -I {} bash -c "curl -sL -X GET -w '%{http_code}' 0.0.0.0:{} -o /dev/null | xargs -I % test % -eq 200") && (printenv nodetype | xargs -I % test % == "monitoring" || printenv service_healthcheck_port | xargs -I {} bash -c "curl -sL -X GET -w '%{http_code}' 0.0.0.0:{}/health-check/direct-active -o /dev/null | xargs -I % test % -eq 200 -o % -eq 503")
-
-                  RUN \
-                    echo '#!/bin/bash' > /sbin/dhclient && \
-                    echo 'exit 0' >> /sbin/dhclient && \
-                    echo '3a:40:d5:42:f4:86' > /usr/sw/.nodeIdentifyingMacAddr && \
-                    chmod +x /sbin/dhclient
       env_file: *env_file
       image: solace-bosh
       name: pubsub
